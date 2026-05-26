@@ -20,7 +20,7 @@ public class SplashScene : MonoBehaviour
     [Header("Settings")]
     public float fadeDuration = 1.5f;
     public float loadingDuration = 3f;
-    public string nextSceneName = "MainMenu";
+    public string nextSceneName = "MainMenuScene";
 
     void Start()
     {
