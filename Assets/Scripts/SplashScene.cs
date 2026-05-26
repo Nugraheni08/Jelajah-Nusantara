@@ -8,8 +8,14 @@ public class SplashScene : MonoBehaviour
 {
     [Header("UI References")]
     public Image loadingBarFill;
+    public Image loadingBarBackground;
     public CanvasGroup logoGroup;
     public CanvasGroup subtitleGroup;
+
+    [Header("Loading Bar Colors")]
+    public Color barColorStart = new Color(0.85f, 0.55f, 0.10f, 1f); // emas terang
+    public Color barColorEnd = new Color(0.55f, 0.28f, 0.05f, 1f);   // coklat tua
+    public Color barBgColor = new Color(0.96f, 0.90f, 0.78f, 1f);    // krem
 
     [Header("Settings")]
     public float fadeDuration = 1.5f;
@@ -18,32 +24,40 @@ public class SplashScene : MonoBehaviour
 
     void Start()
     {
+        // Set warna background bar
+        if (loadingBarBackground != null)
+            loadingBarBackground.color = barBgColor;
+
         StartCoroutine(PlaySplash());
     }
 
     IEnumerator PlaySplash()
     {
-        // Fade in logo
         logoGroup.alpha = 0f;
         subtitleGroup.alpha = 0f;
         loadingBarFill.fillAmount = 0f;
+        loadingBarFill.color = barColorStart;
 
         yield return StartCoroutine(FadeIn(logoGroup, fadeDuration));
         yield return StartCoroutine(FadeIn(subtitleGroup, fadeDuration * 0.5f));
 
-        // Loading bar progress
+        // Loading bar dengan gradient color
         float elapsed = 0f;
         while (elapsed < loadingDuration)
         {
             elapsed += Time.deltaTime;
-            loadingBarFill.fillAmount = Mathf.Clamp01(elapsed / loadingDuration);
+            float progress = Mathf.Clamp01(elapsed / loadingDuration);
+            loadingBarFill.fillAmount = progress;
+
+            // Warna berubah dari emas ke coklat sesuai progress
+            loadingBarFill.color = Color.Lerp(barColorStart, barColorEnd, progress);
+
             yield return null;
         }
 
         loadingBarFill.fillAmount = 1f;
         yield return new WaitForSeconds(0.5f);
 
-        // Load next scene
         SceneManager.LoadScene(nextSceneName);
     }
 

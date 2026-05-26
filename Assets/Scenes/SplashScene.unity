@@ -177,8 +177,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 554749383eaf2494d94941ddbca5e50a, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 919947395}
   - component: {fileID: 919947394}
   - component: {fileID: 919947393}
+  - component: {fileID: 919947397}
   m_Layer: 5
   m_Name: LogoText
   m_TagString: Untagged
@@ -257,13 +258,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4281573853
   m_fontColor: {r: 0.8666667, g: 0.6313726, b: 0.2, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.8666667, g: 0.6313726, b: 0.2, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 0.8666667, g: 0.6313726, b: 0.2, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -345,6 +346,21 @@ RectTransform:
   m_AnchoredPosition: {x: 106, y: 171}
   m_SizeDelta: {x: 600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &919947397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919947392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Shadow
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2.08, y: -0.92}
+  m_UseGraphicAlpha: 1
 --- !u!1 &947386749
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: f92ee422e19b9f44fbc93070e28e6973, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -916,10 +932,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 40.7
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -1109,8 +1125,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SplashScene
   loadingBarFill: {fileID: 947386750}
+  loadingBarBackground: {fileID: 0}
   logoGroup: {fileID: 919947393}
   subtitleGroup: {fileID: 1734832422}
+  barColorStart: {r: 0.85, g: 0.55, b: 0.1, a: 1}
+  barColorEnd: {r: 0.55, g: 0.28, b: 0.05, a: 1}
+  barBgColor: {r: 0.96, g: 0.9, b: 0.78, a: 1}
   fadeDuration: 1.5
   loadingDuration: 3
   nextSceneName: MainMenu
