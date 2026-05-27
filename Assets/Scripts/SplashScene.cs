@@ -13,9 +13,9 @@ public class SplashScene : MonoBehaviour
     public CanvasGroup subtitleGroup;
 
     [Header("Loading Bar Colors")]
-    public Color barColorStart = new Color(0.85f, 0.55f, 0.10f, 1f); // emas terang
-    public Color barColorEnd = new Color(0.55f, 0.28f, 0.05f, 1f);   // coklat tua
-    public Color barBgColor = new Color(0.96f, 0.90f, 0.78f, 1f);    // krem
+    public Color barColorStart = new Color(0.85f, 0.55f, 0.10f, 1f); 
+    public Color barColorEnd = new Color(0.55f, 0.28f, 0.05f, 1f);   
+    public Color barBgColor = new Color(0.96f, 0.90f, 0.78f, 1f);    
 
     [Header("Settings")]
     public float fadeDuration = 1.5f;
@@ -24,7 +24,7 @@ public class SplashScene : MonoBehaviour
 
     void Start()
     {
-        // Set warna background bar
+       
         if (loadingBarBackground != null)
             loadingBarBackground.color = barBgColor;
 
