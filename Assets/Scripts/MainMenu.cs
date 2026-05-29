@@ -14,14 +14,13 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        // Pastikan panel tersembunyi saat start
         if (settingsPanel != null) settingsPanel.SetActive(false);
         if (creditsPanel != null) creditsPanel.SetActive(false);
     }
 
     public void OnMulaiPermainan()
     {
-        SceneManager.LoadScene("GameScene"); // sesuaikan nama scene
+        SceneManager.LoadScene("GameScene");
     }
 
     public void OnPilihLevel()

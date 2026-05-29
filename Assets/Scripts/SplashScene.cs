@@ -41,7 +41,6 @@ public class SplashScene : MonoBehaviour
         yield return StartCoroutine(FadeIn(logoGroup, fadeDuration));
         yield return StartCoroutine(FadeIn(subtitleGroup, fadeDuration * 0.5f));
 
-        // Loading bar dengan gradient color
         float elapsed = 0f;
         while (elapsed < loadingDuration)
         {
@@ -49,7 +48,6 @@ public class SplashScene : MonoBehaviour
             float progress = Mathf.Clamp01(elapsed / loadingDuration);
             loadingBarFill.fillAmount = progress;
 
-            // Warna berubah dari emas ke coklat sesuai progress
             loadingBarFill.color = Color.Lerp(barColorStart, barColorEnd, progress);
 
             yield return null;
