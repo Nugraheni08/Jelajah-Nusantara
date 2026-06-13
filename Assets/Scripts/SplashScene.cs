@@ -56,7 +56,7 @@ public class SplashScene : MonoBehaviour
         loadingBarFill.fillAmount = 1f;
         yield return new WaitForSeconds(0.5f);
 
-        SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadScene(1);
     }
 
     IEnumerator FadeIn(CanvasGroup cg, float duration)

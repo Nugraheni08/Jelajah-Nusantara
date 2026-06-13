@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnMulaiPermainan()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("OpeningScene");
     }
 
     public void OnPilihLevel()
