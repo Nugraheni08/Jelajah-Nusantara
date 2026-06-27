@@ -6,49 +6,66 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
 
-public class DialogManager : MonoBehaviour
+public class MalukuDialogManager : MonoBehaviour
 {
     [Header("UI References")]
     public Image background;
-    public Image characterImage;
+    public Image characterImageLeft;
+    public Image characterImageRight;
     public TextMeshProUGUI dialogText;
     public TextMeshProUGUI speakerName;
     public GameObject continuePrompt;
     public GameObject dialogBox;
     public Image flashOverlay;
 
+    [Header("Misi Panel")]
+    public GameObject misiPanel;
+    public TextMeshProUGUI misiTitle;
+    public TextMeshProUGUI misiDesc;
+    public GameObject misiButton;
+
+    [Header("Countdown Panel")]
+    public GameObject countdownPanel;
+    public TextMeshProUGUI countdownText;
+
     [Header("Audio")]
     public AudioSource audioSource;
-    public AudioClip whooshSFX;
     public AudioClip noiseSFX;
-    public int noiseStartLine = 7;
-    public int noiseEndLine = 9;
+    public int noiseStartLine = 2;
+    public int noiseEndLine = 3;
 
     [Header("Flash Settings")]
-    public int flashAtLine = 15;
+    public int flashAtLine = 999;
     public float flashDuration = 1.5f;
 
     [Header("Dialog Data")]
-    public List<DialogLine> dialogLines;
+    public List<MalukuDialogLine> dialogLines;
 
     [Header("Settings")]
     public float typingSpeed = 0.03f;
-    public string nextSceneName = "GameIntroScene";
+    public string nextSceneName = "MalukuGameplay";
 
     private int currentLine = 0;
     private bool isTyping = false;
     private bool skipTyping = false;
+    private bool waitingForMisi = false;
 
     void Start()
     {
         continuePrompt.SetActive(false);
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
+        if (misiPanel != null)
+            misiPanel.SetActive(false);
+        if (countdownPanel != null)
+            countdownPanel.SetActive(false);
         ShowLine(currentLine);
     }
 
     void Update()
     {
+        if (waitingForMisi) return;
+
         if (Mouse.current.leftButton.wasPressedThisFrame ||
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
@@ -64,25 +81,38 @@ public class DialogManager : MonoBehaviour
     {
         if (index >= dialogLines.Count)
         {
-            SceneManager.LoadScene(nextSceneName);
+            ShowMisiPanel();
             return;
         }
 
-        DialogLine line = dialogLines[index];
+        MalukuDialogLine line = dialogLines[index];
 
         if (background != null && line.background != null)
             background.sprite = line.background;
 
-        if (characterImage != null)
+        if (characterImageLeft != null)
         {
-            if (line.characterSprite != null)
+            if (line.characterSpriteLeft != null)
             {
-                characterImage.gameObject.SetActive(true);
-                characterImage.sprite = line.characterSprite;
+                characterImageLeft.gameObject.SetActive(true);
+                characterImageLeft.sprite = line.characterSpriteLeft;
             }
             else
             {
-                characterImage.gameObject.SetActive(false);
+                characterImageLeft.gameObject.SetActive(false);
+            }
+        }
+
+        if (characterImageRight != null)
+        {
+            if (line.characterSpriteRight != null)
+            {
+                characterImageRight.gameObject.SetActive(true);
+                characterImageRight.sprite = line.characterSpriteRight;
+            }
+            else
+            {
+                characterImageRight.gameObject.SetActive(false);
             }
         }
 
@@ -126,11 +156,48 @@ public class DialogManager : MonoBehaviour
         StartCoroutine(TypeText(line.dialogText));
     }
 
+    void ShowMisiPanel()
+    {
+        waitingForMisi = true;
+        continuePrompt.SetActive(false);
+        dialogBox.SetActive(false);
+
+        if (misiPanel != null)
+        {
+            misiPanel.SetActive(true);
+            if (misiTitle != null)
+                misiTitle.text = "MISI BARU";
+            if (misiDesc != null)
+                misiDesc.text = "Pulihkan Harmoni Totobuang!";
+        }
+    }
+
+    public void OnMisiButtonClick()
+    {
+        misiPanel.SetActive(false);
+        StartCoroutine(CountdownAndStart());
+    }
+
+    IEnumerator CountdownAndStart()
+    {
+        if (countdownPanel != null)
+        {
+            countdownPanel.SetActive(true);
+            string[] counts = { "3", "2", "1", "START!" };
+            foreach (string c in counts)
+            {
+                if (countdownText != null)
+                    countdownText.text = c;
+                yield return new WaitForSeconds(1f);
+            }
+            countdownPanel.SetActive(false);
+        }
+
+        SceneManager.LoadScene(nextSceneName);
+    }
+
     IEnumerator FlashEffect()
     {
-        if (audioSource != null && whooshSFX != null)
-            audioSource.PlayOneShot(whooshSFX);
-
         float t = 0f;
         while (t < flashDuration * 0.3f)
         {
@@ -184,11 +251,12 @@ public class DialogManager : MonoBehaviour
 }
 
 [System.Serializable]
-public class DialogLine
+public class MalukuDialogLine
 {
     public string speakerName = "";
     public Sprite background;
-    public Sprite characterSprite;
+    public Sprite characterSpriteLeft;
+    public Sprite characterSpriteRight;
     [TextArea(3, 6)]
     public string dialogText;
 }
