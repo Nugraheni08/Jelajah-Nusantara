@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4845, y: -115.75}
-  m_SizeDelta: {x: 671.8369, y: 95.4693}
+  m_AnchoredPosition: {x: 0, y: -197}
+  m_SizeDelta: {x: 422.7842, y: 107.4162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300414558
 MonoBehaviour:
@@ -494,8 +494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -251.12244, y: 33.496}
-  m_SizeDelta: {x: 90.0734, y: 28.4765}
+  m_AnchoredPosition: {x: -167, y: 39.47}
+  m_SizeDelta: {x: 70.3183, y: 28.4765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &703157812
 CanvasRenderer:
@@ -552,13 +552,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
-  m_fontSizeBase: 23
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -715,8 +715,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 284, y: -140}
-  m_SizeDelta: {x: 53.1128, y: 24.6237}
+  m_AnchoredPosition: {x: 6.084, y: -201.7661}
+  m_SizeDelta: {x: 400.4663, y: 80.1148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &813506087
 GameObject:
@@ -987,21 +987,21 @@ MonoBehaviour:
   namaKarakter: {fileID: 703157813}
   nextButton: {fileID: 742155077}
   backgrounds:
-  - {fileID: 21300000, guid: f19501d9be8717c47b79df95ecd8c1bc, type: 3}
+  - {fileID: 21300000, guid: 49563eabf99584146b8ea77d865e986a, type: 3}
   - {fileID: 21300000, guid: 405ba3487466c624fb8a28e384112f15, type: 3}
   - {fileID: 21300000, guid: 405ba3487466c624fb8a28e384112f15, type: 3}
-  - {fileID: 21300000, guid: 02cc71dd4e06aea4495ca1dc46b273a6, type: 3}
-  - {fileID: 21300000, guid: 02cc71dd4e06aea4495ca1dc46b273a6, type: 3}
-  - {fileID: 21300000, guid: 69b55a8e7505295449634f09155abf81, type: 3}
+  - {fileID: 21300000, guid: 3c3b758eec5987d49b19f1f5349a16a2, type: 3}
+  - {fileID: 21300000, guid: 3c3b758eec5987d49b19f1f5349a16a2, type: 3}
   - {fileID: 21300000, guid: f949ae0c1d8b89641b5d7f2cbd587fe4, type: 3}
   - {fileID: 21300000, guid: f949ae0c1d8b89641b5d7f2cbd587fe4, type: 3}
-  - {fileID: 21300000, guid: 69b55a8e7505295449634f09155abf81, type: 3}
+  - {fileID: 21300000, guid: f949ae0c1d8b89641b5d7f2cbd587fe4, type: 3}
+  - {fileID: 21300000, guid: 42e107a203fd28349a6b482311cf0373, type: 3}
   - {fileID: 21300000, guid: 035428553ba4c2142ba367b2fd7a90de, type: 3}
   - {fileID: 21300000, guid: 42e107a203fd28349a6b482311cf0373, type: 3}
   - {fileID: 21300000, guid: 035428553ba4c2142ba367b2fd7a90de, type: 3}
   - {fileID: 21300000, guid: 035428553ba4c2142ba367b2fd7a90de, type: 3}
-  - {fileID: 21300000, guid: 02cc71dd4e06aea4495ca1dc46b273a6, type: 3}
-  - {fileID: 21300000, guid: 02cc71dd4e06aea4495ca1dc46b273a6, type: 3}
+  - {fileID: 21300000, guid: 3c3b758eec5987d49b19f1f5349a16a2, type: 3}
+  - {fileID: 21300000, guid: 3c3b758eec5987d49b19f1f5349a16a2, type: 3}
   - {fileID: 21300000, guid: f949ae0c1d8b89641b5d7f2cbd587fe4, type: 3}
   - {fileID: 21300000, guid: 42e107a203fd28349a6b482311cf0373, type: 3}
   - {fileID: 21300000, guid: 035428553ba4c2142ba367b2fd7a90de, type: 3}
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   - Terima kasih, Aksa.
   - Aku hanya mengingatkan orang-orang tentang apa yang mereka miliki.
   - Dan itu sudah lebih dari cukup.
-  namaSceneBerikutnya: EndingScene
+  namaSceneBerikutnya: PapuaGamePlayScene
 --- !u!4 &1359128416
 Transform:
   m_ObjectHideFlags: 0
@@ -1133,8 +1133,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280035126
-  m_fontColor: {r: 0.21176471, g: 0.15294118, b: 0.10980392, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1151,15 +1151,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
