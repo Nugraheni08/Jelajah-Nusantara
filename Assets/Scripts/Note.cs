@@ -29,6 +29,8 @@ public class Note : MonoBehaviour
 
     public void Hit()
     {
+        Debug.Log("Note.Hit() dipanggil! lane=" + lane);
+        gameplayManager.PlayNoteSound(lane);
         gameplayManager.AddScore(100);
         Destroy(gameObject);
     }
