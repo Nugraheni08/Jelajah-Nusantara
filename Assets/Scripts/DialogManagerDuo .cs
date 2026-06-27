@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
 
-public class DialogManager : MonoBehaviour
+public class DialogManagerDuo : MonoBehaviour
 {
     [Header("UI References")]
     public Image background;
-    public Image characterImage;
+    public Image characterImageLeft;
+    public Image characterImageRight;
     public TextMeshProUGUI dialogText;
     public TextMeshProUGUI speakerName;
     public GameObject continuePrompt;
@@ -19,21 +20,18 @@ public class DialogManager : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource audioSource;
-    public AudioClip whooshSFX;
-    public AudioClip noiseSFX;
-    public int noiseStartLine = 7;
-    public int noiseEndLine = 9;
+    public AudioClip flashSFX;
 
     [Header("Flash Settings")]
-    public int flashAtLine = 15;
-    public float flashDuration = 1.5f;
+    public int flashAtLine = 0;
+    public float flashDuration = 2f;
 
     [Header("Dialog Data")]
-    public List<DialogLine> dialogLines;
+    public List<DialogLineDuo> dialogLines;
 
     [Header("Settings")]
     public float typingSpeed = 0.03f;
-    public string nextSceneName = "GameIntroScene";
+    public string nextSceneName = "MainMenu";
 
     private int currentLine = 0;
     private bool isTyping = false;
@@ -68,21 +66,34 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-        DialogLine line = dialogLines[index];
+        DialogLineDuo line = dialogLines[index];
 
         if (background != null && line.background != null)
             background.sprite = line.background;
 
-        if (characterImage != null)
+        if (characterImageLeft != null)
         {
-            if (line.characterSprite != null)
+            if (line.characterSpriteLeft != null)
             {
-                characterImage.gameObject.SetActive(true);
-                characterImage.sprite = line.characterSprite;
+                characterImageLeft.gameObject.SetActive(true);
+                characterImageLeft.sprite = line.characterSpriteLeft;
             }
             else
             {
-                characterImage.gameObject.SetActive(false);
+                characterImageLeft.gameObject.SetActive(false);
+            }
+        }
+
+        if (characterImageRight != null)
+        {
+            if (line.characterSpriteRight != null)
+            {
+                characterImageRight.gameObject.SetActive(true);
+                characterImageRight.sprite = line.characterSpriteRight;
+            }
+            else
+            {
+                characterImageRight.gameObject.SetActive(false);
             }
         }
 
@@ -102,34 +113,13 @@ public class DialogManager : MonoBehaviour
         if (flashOverlay != null && index == flashAtLine)
             StartCoroutine(FlashEffect());
 
-        if (audioSource != null && noiseSFX != null)
-        {
-            if (index >= noiseStartLine && index <= noiseEndLine)
-            {
-                if (!audioSource.isPlaying)
-                {
-                    audioSource.clip = noiseSFX;
-                    audioSource.loop = true;
-                    audioSource.Play();
-                }
-            }
-            else
-            {
-                if (audioSource.clip == noiseSFX && audioSource.isPlaying)
-                {
-                    audioSource.Stop();
-                    audioSource.clip = null;
-                }
-            }
-        }
-
         StartCoroutine(TypeText(line.dialogText));
     }
 
     IEnumerator FlashEffect()
     {
-        if (audioSource != null && whooshSFX != null)
-            audioSource.PlayOneShot(whooshSFX);
+        if (audioSource != null && flashSFX != null)
+            audioSource.PlayOneShot(flashSFX);
 
         float t = 0f;
         while (t < flashDuration * 0.3f)
@@ -184,11 +174,12 @@ public class DialogManager : MonoBehaviour
 }
 
 [System.Serializable]
-public class DialogLine
+public class DialogLineDuo
 {
     public string speakerName = "";
     public Sprite background;
-    public Sprite characterSprite;
+    public Sprite characterSpriteLeft;
+    public Sprite characterSpriteRight;
     [TextArea(3, 6)]
     public string dialogText;
 }

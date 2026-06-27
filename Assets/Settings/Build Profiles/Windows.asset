@@ -29,6 +29,9 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/OpeningScene.unity
     m_guid: 6fb6dc070df0a80438c7354f7f33cff2
+  - m_enabled: 1
+    m_path: Assets/Scenes/GameIntroScene.unity
+    m_guid: 7904d0c01b5280746905e09fd0446fbd
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
