@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.8688, y: -116.32}
-  m_SizeDelta: {x: 677.6155, y: 90.782}
+  m_AnchoredPosition: {x: 0, y: -197}
+  m_SizeDelta: {x: 422.7842, y: 107.4162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300414558
 MonoBehaviour:
@@ -494,8 +494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -241.9, y: 37.4}
-  m_SizeDelta: {x: 177.6864, y: 29.0336}
+  m_AnchoredPosition: {x: -167, y: 39.47}
+  m_SizeDelta: {x: 70.3183, y: 28.4765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &703157812
 CanvasRenderer:
@@ -534,8 +534,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.7847328, y: 0.47905445, z: -11.150715, w: 2.4431252}
+  m_margin: {x: 0, y: 0, z: -17.738651, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -715,9 +715,138 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124, y: -116.32}
-  m_SizeDelta: {x: 363.4653, y: 64.902}
+  m_AnchoredPosition: {x: 6.084, y: -201.7661}
+  m_SizeDelta: {x: 400.4663, y: 80.1148}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &813506087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813506089}
+  - component: {fileID: 813506088}
+  m_Layer: 0
+  m_Name: SfxTifa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &813506088
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813506087}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: a9aae35ebaf8cd14883351b95e4106b6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &813506089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813506087}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 291.3967, y: 162.02176, z: -2.26706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913153477
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,41 +987,62 @@ MonoBehaviour:
   namaKarakter: {fileID: 703157813}
   nextButton: {fileID: 742155077}
   backgrounds:
-  - {fileID: 21300000, guid: a871dc3ea74a57042994db5f4c1f8c36, type: 3}
+  - {fileID: 21300000, guid: 49563eabf99584146b8ea77d865e986a, type: 3}
+  - {fileID: 21300000, guid: 405ba3487466c624fb8a28e384112f15, type: 3}
+  - {fileID: 21300000, guid: 405ba3487466c624fb8a28e384112f15, type: 3}
+  - {fileID: 21300000, guid: 3c3b758eec5987d49b19f1f5349a16a2, type: 3}
+  - {fileID: 21300000, guid: 3c3b758eec5987d49b19f1f5349a16a2, type: 3}
+  - {fileID: 21300000, guid: f949ae0c1d8b89641b5d7f2cbd587fe4, type: 3}
+  - {fileID: 21300000, guid: f949ae0c1d8b89641b5d7f2cbd587fe4, type: 3}
+  - {fileID: 21300000, guid: f949ae0c1d8b89641b5d7f2cbd587fe4, type: 3}
+  - {fileID: 21300000, guid: 42e107a203fd28349a6b482311cf0373, type: 3}
+  - {fileID: 21300000, guid: 035428553ba4c2142ba367b2fd7a90de, type: 3}
+  - {fileID: 21300000, guid: 42e107a203fd28349a6b482311cf0373, type: 3}
   - {fileID: 21300000, guid: 035428553ba4c2142ba367b2fd7a90de, type: 3}
   - {fileID: 21300000, guid: 035428553ba4c2142ba367b2fd7a90de, type: 3}
-  - {fileID: 21300000, guid: 384f2d98b360ec94ea8395a9a9269eef, type: 3}
-  - {fileID: 21300000, guid: 384f2d98b360ec94ea8395a9a9269eef, type: 3}
-  - {fileID: 21300000, guid: 384f2d98b360ec94ea8395a9a9269eef, type: 3}
-  - {fileID: 21300000, guid: 2a27c6fe96ceea7479f6916f02d303b3, type: 3}
-  - {fileID: 21300000, guid: 2a27c6fe96ceea7479f6916f02d303b3, type: 3}
+  - {fileID: 21300000, guid: 3c3b758eec5987d49b19f1f5349a16a2, type: 3}
+  - {fileID: 21300000, guid: 3c3b758eec5987d49b19f1f5349a16a2, type: 3}
+  - {fileID: 21300000, guid: f949ae0c1d8b89641b5d7f2cbd587fe4, type: 3}
+  - {fileID: 21300000, guid: 42e107a203fd28349a6b482311cf0373, type: 3}
   - {fileID: 21300000, guid: 035428553ba4c2142ba367b2fd7a90de, type: 3}
-  - {fileID: 21300000, guid: 467517497e49fd0408ef867285f30703, type: 3}
-  - {fileID: 21300000, guid: ad12681a780e9d24a82d39149de6115a, type: 3}
   namaList:
   - 
-  - Ranu
-  - Ranu
+  - Warga
+  - Warga
   - 
-  - Noise
-  - Noise
-  - Aksa
+  - 
   - Aksa
   - Ranu
+  - Ranu
+  - Aksa
+  - Ranu
+  - Aksa
+  - Ranu
+  - Ranu
   - 
   - 
+  - Ranu
+  - Aksa
+  - Ranu
   dialogList:
-  - Perjalanan membawa Aksa menuju Papua
-  - Di sini terdapat harmoni Tifa
-  - Namun Noise telah melemahkannya
-  - 
-  - Kenapa kau terus bertahan?
-  - Biarkan budaya lama menghilang.
-  - Tidak.
-  - Budaya adalah bagian dari siapa kita
-  - Aksa...
-  - 
-  - 
+  - Suara Tifa kembali menggema
+  - Aku ingat suara itu!
+  - Ini Tifa!
+  - Angklung, Totobuang, dan Tifa kembali terdengar
+  - Harmoni Nusantara telah pulih
+  - Jadi... semuanya sudah berakhir?
+  - Ya.
+  - Noise telah menghilang.
+  - Aku tidak menyangka perjalanan ini membawaku sejauh ini.
+  - Dan semua itu berkat keberanianmu.
+  - Tapi budaya tidak akan bertahan hanya karena aku seorang.
+  - Benar.
+  - Budaya akan tetap hidup selama masih ada yang mau mengenal dan melestarikannya.
+  - Budaya bukan sekadar warisan masa lalu.
+  - Budaya adalah jati diri yang harus dijaga oleh setiap generasi.
+  - Terima kasih, Aksa.
+  - Aku hanya mengingatkan orang-orang tentang apa yang mereka miliki.
+  - Dan itu sudah lebih dari cukup.
   namaSceneBerikutnya: PapuaGamePlayScene
 --- !u!4 &1359128416
 Transform:
@@ -943,8 +1093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.2369, y: -9.0648}
-  m_SizeDelta: {x: 297.6698, y: 55.205}
+  m_AnchoredPosition: {x: 49.0359, y: -5.8337}
+  m_SizeDelta: {x: 298.0718, y: 61.6673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1549663936
 CanvasRenderer:
@@ -1040,7 +1190,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -213.31499, y: 0, z: -121.32138, w: 0}
+  m_margin: {x: -90.736755, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1301,3 +1451,4 @@ SceneRoots:
   - {fileID: 913153478}
   - {fileID: 1927051927}
   - {fileID: 1359128416}
+  - {fileID: 813506089}
