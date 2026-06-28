@@ -346,6 +346,8 @@ public class JabarWinManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f);
+        PlayerPrefs.SetInt("MalukuUnlocked", 1);   
+        PlayerPrefs.Save();                         
         SceneManager.LoadScene(nextSceneName);
     }
 

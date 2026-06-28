@@ -1306,7 +1306,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   dingSFX: {fileID: 0}
   totobuangMusic: {fileID: 0}
-  nextSceneName: PapuaStoryScene
+  nextSceneName: LevelSelectScene
   typingSpeed: 0.04
 --- !u!1 &402051787
 GameObject:
