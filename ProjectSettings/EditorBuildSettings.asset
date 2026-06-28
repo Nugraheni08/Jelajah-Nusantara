@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GameIntroScene.unity
     guid: 7904d0c01b5280746905e09fd0446fbd
   - enabled: 1
-    path: Assets/Scenes/MalukuStoryScene.unity
+    path: Assets/Scenes/Maluku/MalukuStoryScene.unity
     guid: 86990a6fa54b42c44b30e628d41d9db1
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity

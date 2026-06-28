@@ -46,6 +46,7 @@ public class MalukuDialogManager : MonoBehaviour
     [Header("Settings")]
     public float typingSpeed = 0.03f;
     public string gameplaySceneName = "GameplayScene";
+    public string levelDataKey = "LevelData_Maluku"; // ganti sesuai level: LevelData_JawaBarat / LevelData_Papua
 
     private int currentLine = 0;
     private bool isTyping = false;
@@ -180,7 +181,7 @@ public class MalukuDialogManager : MonoBehaviour
 
     public void OnMisiButtonClick()
     {
-        PlayerPrefs.SetString("SelectedLevel", "LevelData_Maluku");
+        PlayerPrefs.SetString("SelectedLevel", levelDataKey);
         PlayerPrefs.Save();
 
         Debug.Log("Disimpan = " + PlayerPrefs.GetString("SelectedLevel"));
