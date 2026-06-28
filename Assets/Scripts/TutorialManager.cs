@@ -32,7 +32,8 @@ public class TutorialManager : MonoBehaviour
     };
 
     [Header("Settings")]
-    public string nextSceneName = "JabarStoryScene";
+    public string nextSceneName = "GamePlayScene";
+    public string levelDataName = "LevelData_JawaBarat";
     public float typingSpeed = 0.03f;
 
     private int currentSlide = 0;
@@ -45,11 +46,9 @@ public class TutorialManager : MonoBehaviour
         if (continuePrompt != null) continuePrompt.SetActive(false);
         if (tutorialBox != null) tutorialBox.gameObject.SetActive(false);
 
-        // Set background intro
         if (background != null && bgIntro != null)
             background.sprite = bgIntro;
 
-        // Tampilkan intro dulu
         if (panelIntro != null) panelIntro.SetActive(true);
     }
 
@@ -75,7 +74,6 @@ public class TutorialManager : MonoBehaviour
         if (panelIntro != null) panelIntro.SetActive(false);
         if (tutorialBox != null) tutorialBox.gameObject.SetActive(true);
 
-        // Ganti background ke slide pertama
         if (background != null && slideBackgrounds != null && slideBackgrounds.Length > 0)
             background.sprite = slideBackgrounds[0];
 
@@ -84,16 +82,13 @@ public class TutorialManager : MonoBehaviour
 
     void ShowSlide(int index)
     {
-        // Ganti background
         if (background != null && slideBackgrounds != null &&
             index < slideBackgrounds.Length)
             background.sprite = slideBackgrounds[index];
 
-        // Pindah posisi textbox
         if (tutorialBox != null && index < slideBoxPositions.Length)
             tutorialBox.anchoredPosition = slideBoxPositions[index];
 
-        // Tampilkan teks
         if (index < slideTexts.Length)
             StartCoroutine(TypeText(slideTexts[index]));
     }
@@ -104,6 +99,9 @@ public class TutorialManager : MonoBehaviour
 
         if (currentSlide >= slideBackgrounds.Length)
         {
+            // Simpan level sebelum masuk gameplay
+            PlayerPrefs.SetString("SelectedLevel", levelDataName);
+            PlayerPrefs.Save();
             SceneManager.LoadScene(nextSceneName);
             return;
         }

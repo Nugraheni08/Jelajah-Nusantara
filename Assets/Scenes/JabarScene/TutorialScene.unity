@@ -1057,7 +1057,7 @@ MonoBehaviour:
   - {x: 0, y: -80}
   - {x: -50, y: 90}
   - {x: 0, y: -110}
-  nextSceneName: JabarStoryScene
+  nextSceneName: GamePlayScene
   typingSpeed: 0.03
 --- !u!1 &1064223409
 GameObject:
