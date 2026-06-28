@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8ec3ef6dce7bbda4d8de32ed981caf27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1586,53 +1586,71 @@ MonoBehaviour:
   flashDuration: 1.5
   dialogLines:
   - speakerName: 
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
     characterSpriteLeft: {fileID: 0}
     characterSpriteRight: {fileID: 0}
-    dialogText: Perjalanan membawa Aksa menuju Papua.
+    dialogText: Daerah pertama terbuka
   - speakerName: Ranu
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
     characterSpriteLeft: {fileID: 0}
     characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
-    dialogText: Di sini terdapat harmoni Tifa.
+    dialogText: Dengarkan suara angklung.
   - speakerName: Ranu
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
     characterSpriteLeft: {fileID: 0}
     characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
-    dialogText: Namun Noise telah melemahkannya.
-  - speakerName: Noise
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: 68426ea8f19c7a64d8e8e1288308566b, type: 3}
-    dialogText: Kenapa kau terus bertahan?
-  - speakerName: Noise
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: 68426ea8f19c7a64d8e8e1288308566b, type: 3}
-    dialogText: Biarkan budaya lama menghilang.
+    dialogText: Ikuti ritmenya.
   - speakerName: Aksa
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: 9166456fd00578d498202099521bd8d6, type: 3}
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
     characterSpriteRight: {fileID: 0}
-    dialogText: Tidak.
-  - speakerName: Aksa
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: 9166456fd00578d498202099521bd8d6, type: 3}
-    characterSpriteRight: {fileID: 0}
-    dialogText: Budaya adalah bagian dari siapa kita.
+    dialogText: 'Jadi aku harus memainkan musik ini?
+
+'
   - speakerName: Ranu
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
     characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: c58b1217c75d4d444930058f5f36d915, type: 3}
-    dialogText: Aksa...
+    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    dialogText: Benar.
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    dialogText: Setiap daerah memiliki harmoni yang berbeda.
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: d0d890fc77fb9524c8f969c917670a5f, type: 3}
+    dialogText: Jika kamu dapat mengikuti iramanya, kekuatan harmoni akan bangkit
+      kembali
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: d0d890fc77fb9524c8f969c917670a5f, type: 3}
+    dialogText: Bagus. Sekarang saatnya misi yang sebenarnya.
+  - speakerName: Aksa
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 21de816aa8ae34043a5c97738347ede4, type: 3}
+    dialogText: Apa itu?
   - speakerName: 
-    background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
     characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: c58b1217c75d4d444930058f5f36d915, type: 3}
-    dialogText: Aksa...
+    characterSpriteRight: {fileID: 21300000, guid: 68426ea8f19c7a64d8e8e1288308566b, type: 3}
+    dialogText: 
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 78a1c13d632bf9746908c46d3c4f2e8c, type: 3}
+    dialogText: Noise.
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 78a1c13d632bf9746908c46d3c4f2e8c, type: 3}
+    dialogText: Kalahkan dia dan pulihkan harmoni angklung
   typingSpeed: 0.03
   gameplaySceneName: GamePlayScene
-  levelDataKey: LevelData_Papua
+  levelDataKey: LevelData_Jabar
 --- !u!1 &1465953582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,7 +1916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pulihkan Harmoni Tifa!
+  m_text: Pulihkan Harmoni Angklung!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
   m_sharedMaterial: {fileID: -5080304883722848397, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
