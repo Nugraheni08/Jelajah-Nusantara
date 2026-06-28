@@ -214,5 +214,5 @@ MonoBehaviour:
   - time: 78.44
     lane: 0
   winSceneName: MalukuWinScene
-  loseSceneName: MalukuLoseScene
+  loseSceneName: 
   nextStorySceneName: 

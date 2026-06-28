@@ -56,6 +56,7 @@ public class GameplayManager : MonoBehaviour
             StartCoroutine(WatchSongEnd(musicSource.clip.length));
     }
 
+
     void Update()
     {
         scoreText.text = "SCORE: " + score;
@@ -114,10 +115,14 @@ public class GameplayManager : MonoBehaviour
         levelEnded = true;
 
         if (musicSource != null) musicSource.Stop();
-        Time.timeScale = 0f; // hentikan note/spawner, biar gak lanjut nembak note
+        Time.timeScale = 1f;
 
-        if (panelLevelSelesai != null) panelLevelSelesai.SetActive(true);
-        if (scoreTextSelesai != null) scoreTextSelesai.text = "SCORE: " + score;
+        // Simpan score dulu
+        PlayerPrefs.SetInt("LastScore", score);
+        PlayerPrefs.Save();
+
+        // Langsung pindah ke MalukuWinScene
+        SceneManager.LoadScene("MalukuWinScene");
     }
 
     void GameOver()
@@ -126,14 +131,19 @@ public class GameplayManager : MonoBehaviour
         levelEnded = true;
 
         if (musicSource != null) musicSource.Stop();
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
 
-        if (panelMisiGagal != null) panelMisiGagal.SetActive(true);
-        if (scoreTextGagal != null) scoreTextGagal.text = "SCORE: " + score;
+        // Langsung pindah ke MalukuLoseScene
+        SceneManager.LoadScene("MalukuLoseScene");
     }
 
     public void SongFinished()
     {
+        // Simpan score dulu sebelum pindah
+        PlayerPrefs.SetInt("LastScore", score);
+        PlayerPrefs.Save();
+        Debug.Log("Score tersimpan: " + score);
+
         if (levelData != null)
             SceneManager.LoadScene(levelData.winSceneName);
         else
