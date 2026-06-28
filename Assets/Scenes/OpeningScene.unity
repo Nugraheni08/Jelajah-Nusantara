@@ -1198,6 +1198,14 @@ MonoBehaviour:
   noiseSFX: {fileID: 8300000, guid: e2ed0bd8e598f974e91b6f5994e54585, type: 3}
   noiseStartLine: 7
   noiseEndLine: 9
+  lineAudioClips:
+  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
+  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
+  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
+  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
+  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
+  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
+  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
   flashAtLine: 15
   flashDuration: 5
   dialogLines:
@@ -1256,7 +1264,7 @@ MonoBehaviour:
     dialogText: Disana ia menemukan sebuah kotak tua, karena penasaran Aksa pun membukanya.
   - speakerName: 
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSprite: {fileID: 21300000, guid: 21de816aa8ae34043a5c97738347ede4, type: 3}
+    characterSprite: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
     dialogText: Saat membuka kotak itu, ia menemukan alat musik misterius.
   - speakerName: 
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
