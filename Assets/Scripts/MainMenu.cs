@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
     public void OnPilihLevel()
     {
         StopAllAudio();
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("LevelSelectScene");
     }
 
     public void OnCredits()

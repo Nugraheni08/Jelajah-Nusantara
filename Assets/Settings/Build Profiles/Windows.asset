@@ -33,6 +33,9 @@ MonoBehaviour:
     m_path: Assets/Scenes/GameIntroScene.unity
     m_guid: 7904d0c01b5280746905e09fd0446fbd
   - m_enabled: 1
+    m_path: Assets/Scenes/LevelSelectScene.unity
+    m_guid: bc689ad20b08a7c4b95f16a97a55a44a
+  - m_enabled: 1
     m_path: Assets/Scenes/JabarScene/JabarStoryScene.unity
     m_guid: 4bd9b96907d43cd4f8fc578c3d2d8423
   - m_enabled: 1
