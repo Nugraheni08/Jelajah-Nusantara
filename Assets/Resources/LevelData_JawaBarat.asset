@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b3080c810d25b43a4a6d3335a1eba2, type: 3}
+  m_Name: LevelData_JawaBarat
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelName: Jawa Barat
+  background: {fileID: 21300000, guid: 605e740745c1beb4287306c0e34b9fcf, type: 3}
+  music: {fileID: 8300000, guid: 5ed6d2517caff1f4ea1115b4fff00ce4, type: 3}
+  noteClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  beatMap:
+  - time: 2
+    lane: 2
+  - time: 2.8
+    lane: 0
+  - time: 3.6
+    lane: 2
+  - time: 4.4
+    lane: 1
+  - time: 5.2
+    lane: 2
+  - time: 6
+    lane: 3
+  - time: 6.8
+    lane: 2
+  - time: 7.6
+    lane: 0
+  - time: 8.4
+    lane: 2
+  - time: 9.2
+    lane: 1
+  - time: 10
+    lane: 2
+  - time: 10.8
+    lane: 3
+  - time: 11.6
+    lane: 2
+  - time: 12.4
+    lane: 0
+  - time: 13.2
+    lane: 2
+  - time: 14
+    lane: 1
+  - time: 14.8
+    lane: 2
+  - time: 15.6
+    lane: 3
+  - time: 16.4
+    lane: 2
+  - time: 17.2
+    lane: 0
+  - time: 18
+    lane: 2
+  - time: 18.8
+    lane: 1
+  - time: 19.6
+    lane: 2
+  - time: 20.4
+    lane: 3
+  - time: 21.2
+    lane: 2
+  - time: 22
+    lane: 0
+  - time: 22.8
+    lane: 2
+  - time: 23.6
+    lane: 1
+  - time: 24.4
+    lane: 2
+  - time: 25.2
+    lane: 3
+  - time: 26
+    lane: 2
+  - time: 26.8
+    lane: 0
+  - time: 27.6
+    lane: 2
+  - time: 28.4
+    lane: 1
+  - time: 29.2
+    lane: 2
+  - time: 30
+    lane: 3
+  - time: 30.8
+    lane: 2
+  - time: 31.6
+    lane: 0
+  - time: 32.4
+    lane: 2
+  - time: 33.2
+    lane: 1
+  - time: 34
+    lane: 2
+  - time: 34.8
+    lane: 3
+  - time: 35.6
+    lane: 2
+  - time: 36.4
+    lane: 0
+  - time: 37.2
+    lane: 2
+  - time: 38
+    lane: 1
+  - time: 38.8
+    lane: 2
+  - time: 39.6
+    lane: 3
+  - time: 40.4
+    lane: 2
+  - time: 41.2
+    lane: 0
+  - time: 42
+    lane: 2
+  - time: 42.8
+    lane: 1
+  - time: 43.6
+    lane: 2
+  - time: 44.4
+    lane: 3
+  - time: 45.2
+    lane: 2
+  - time: 46
+    lane: 0
+  - time: 46.8
+    lane: 2
+  - time: 47.6
+    lane: 1
+  - time: 48.4
+    lane: 2
+  - time: 49.2
+    lane: 3
+  - time: 50
+    lane: 2
+  - time: 50.8
+    lane: 0
+  - time: 51.6
+    lane: 2
+  - time: 52.4
+    lane: 1
+  - time: 53.2
+    lane: 2
+  - time: 54
+    lane: 3
+  - time: 54.8
+    lane: 2
+  - time: 55.6
+    lane: 0
+  - time: 56.4
+    lane: 2
+  - time: 57.2
+    lane: 1
+  - time: 58
+    lane: 2
+  - time: 58.8
+    lane: 3
+  - time: 59.6
+    lane: 2
+  - time: 60.4
+    lane: 0
+  - time: 61.2
+    lane: 2
+  - time: 62
+    lane: 1
+  - time: 62.8
+    lane: 2
+  - time: 63.6
+    lane: 3
+  - time: 64.4
+    lane: 2
+  - time: 65.2
+    lane: 0
+  - time: 66
+    lane: 2
+  - time: 66.8
+    lane: 1
+  - time: 67.6
+    lane: 2
+  - time: 68.4
+    lane: 3
+  - time: 69.2
+    lane: 2
+  - time: 70
+    lane: 0
+  - time: 70.8
+    lane: 2
+  - time: 71.6
+    lane: 1
+  - time: 72.4
+    lane: 2
+  - time: 73.2
+    lane: 3
+  - time: 74
+    lane: 2
+  - time: 74.8
+    lane: 0
+  - time: 75.6
+    lane: 2
+  - time: 76.4
+    lane: 1
+  - time: 77.2
+    lane: 2
+  - time: 78
+    lane: 3
+  winSceneName: JawaBaratWinScene
+  loseSceneName: JawaBaratLoseScene
+  nextStorySceneName: 
