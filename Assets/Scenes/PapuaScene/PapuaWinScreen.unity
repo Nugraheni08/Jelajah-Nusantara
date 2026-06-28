@@ -203,8 +203,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MalukuWinManager, Assembly-CSharp
+      - m_Target: {fileID: 364651561}
+        m_TargetAssemblyTypeName: PapuaWinManager, Assembly-CSharp
         m_MethodName: OnUlangLevel
         m_Mode: 1
         m_Arguments:
@@ -886,8 +886,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Test
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
-  m_sharedMaterial: {fileID: -5080304883722848397, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1570,8 +1570,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MalukuWinManager, Assembly-CSharp
+      - m_Target: {fileID: 364651561}
+        m_TargetAssemblyTypeName: PapuaWinManager, Assembly-CSharp
         m_MethodName: OnLanjutResult
         m_Mode: 1
         m_Arguments:
@@ -2182,8 +2182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u25B6"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
-  m_sharedMaterial: {fileID: -5080304883722848397, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3260,8 +3260,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Alat musik pukul berbentuk tabung memanjang yang diukir dengan motif magis
     leluhur. Terbuat dari kayu utuh yang dikosongkan isinya, lalu ditutup dengan
-    kulit rusa atau biawak. Tifa adalah penggerak ritme; semakin kencang kulitnya
-    ditarik, semakin melengking suara yang dihasilkan.
+    kulit rusa atau biawak.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
   m_sharedMaterial: {fileID: -5080304883722848397, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
@@ -3288,14 +3287,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3770,8 +3769,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Narator
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c04f650ec8363a4da2bad5fc9cc0d9b, type: 2}
-  m_sharedMaterial: {fileID: 4441102033581429184, guid: 0c04f650ec8363a4da2bad5fc9cc0d9b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
