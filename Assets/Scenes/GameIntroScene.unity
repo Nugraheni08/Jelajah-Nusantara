@@ -873,7 +873,7 @@ MonoBehaviour:
     characterSprite: {fileID: 0}
     dialogText: '"Dan bangkitkan kembali harmoninya."'
   typingSpeed: 0.03
-  nextSceneName: JabarStoryScene
+  nextSceneName: LevelSelectScene
 --- !u!1 &1536829573
 GameObject:
   m_ObjectHideFlags: 0
