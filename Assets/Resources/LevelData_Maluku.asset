@@ -1,0 +1,219 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b3080c810d25b43a4a6d3335a1eba2, type: 3}
+  m_Name: LevelData_Maluku
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelName: Maluku
+  background: {fileID: 21300000, guid: d9e63b433448a954f8c21930e07c1a28, type: 3}
+  music: {fileID: 8300000, guid: c200e9445923eee4283b996fb33e948a, type: 3}
+  noteClips:
+  - {fileID: 8300000, guid: 1248ded895e1bb64aa419d5699693cdb, type: 3}
+  - {fileID: 8300000, guid: 1248ded895e1bb64aa419d5699693cdb, type: 3}
+  - {fileID: 8300000, guid: 1248ded895e1bb64aa419d5699693cdb, type: 3}
+  - {fileID: 8300000, guid: 1248ded895e1bb64aa419d5699693cdb, type: 3}
+  beatMap:
+  - time: 2.3
+    lane: 2
+  - time: 3.31
+    lane: 0
+  - time: 4.31
+    lane: 2
+  - time: 5.14
+    lane: 1
+  - time: 6
+    lane: 2
+  - time: 6.86
+    lane: 0
+  - time: 7.73
+    lane: 2
+  - time: 8.67
+    lane: 1
+  - time: 9.5
+    lane: 2
+  - time: 10.4
+    lane: 0
+  - time: 11.33
+    lane: 2
+  - time: 12.21
+    lane: 1
+  - time: 13.08
+    lane: 2
+  - time: 13.99
+    lane: 3
+  - time: 14.85
+    lane: 2
+  - time: 15.67
+    lane: 1
+  - time: 16.56
+    lane: 2
+  - time: 17.43
+    lane: 0
+  - time: 18.32
+    lane: 2
+  - time: 19.21
+    lane: 1
+  - time: 20.08
+    lane: 2
+  - time: 20.98
+    lane: 3
+  - time: 21.85
+    lane: 2
+  - time: 22.71
+    lane: 0
+  - time: 23.6
+    lane: 2
+  - time: 24.56
+    lane: 1
+  - time: 25.45
+    lane: 2
+  - time: 26.32
+    lane: 0
+  - time: 27.19
+    lane: 2
+  - time: 28.08
+    lane: 1
+  - time: 28.93
+    lane: 2
+  - time: 29.78
+    lane: 3
+  - time: 30.7
+    lane: 2
+  - time: 31.57
+    lane: 0
+  - time: 32.5
+    lane: 0
+  - time: 33.34
+    lane: 1
+  - time: 34.15
+    lane: 2
+  - time: 35.07
+    lane: 0
+  - time: 35.95
+    lane: 2
+  - time: 36.91
+    lane: 1
+  - time: 37.8
+    lane: 2
+  - time: 38.64
+    lane: 3
+  - time: 39.54
+    lane: 2
+  - time: 40.4
+    lane: 0
+  - time: 41.31
+    lane: 2
+  - time: 42.24
+    lane: 1
+  - time: 43.1
+    lane: 2
+  - time: 43.96
+    lane: 0
+  - time: 44.91
+    lane: 2
+  - time: 45.79
+    lane: 1
+  - time: 46.72
+    lane: 2
+  - time: 47.48
+    lane: 3
+  - time: 48.34
+    lane: 2
+  - time: 49.27
+    lane: 0
+  - time: 50.16
+    lane: 2
+  - time: 51.06
+    lane: 1
+  - time: 51.91
+    lane: 2
+  - time: 52.83
+    lane: 0
+  - time: 53.71
+    lane: 2
+  - time: 54.54
+    lane: 1
+  - time: 55
+    lane: 2
+  - time: 55.46
+    lane: 3
+  - time: 55.91
+    lane: 2
+  - time: 56.36
+    lane: 0
+  - time: 56.8
+    lane: 2
+  - time: 57.61
+    lane: 1
+  - time: 58.54
+    lane: 2
+  - time: 59.42
+    lane: 0
+  - time: 60.28
+    lane: 2
+  - time: 61.11
+    lane: 1
+  - time: 61.52
+    lane: 2
+  - time: 61.89
+    lane: 3
+  - time: 62.11
+    lane: 2
+  - time: 63.34
+    lane: 0
+  - time: 63.61
+    lane: 2
+  - time: 63.85
+    lane: 1
+  - time: 64.35
+    lane: 2
+  - time: 64.6
+    lane: 3
+  - time: 64.97
+    lane: 2
+  - time: 65.37
+    lane: 0
+  - time: 65.64
+    lane: 2
+  - time: 66.88
+    lane: 1
+  - time: 67.16
+    lane: 2
+  - time: 68.49
+    lane: 3
+  - time: 68.91
+    lane: 2
+  - time: 69.19
+    lane: 0
+  - time: 70.42
+    lane: 2
+  - time: 71.32
+    lane: 1
+  - time: 72.24
+    lane: 2
+  - time: 73.09
+    lane: 0
+  - time: 73.96
+    lane: 2
+  - time: 74.9
+    lane: 1
+  - time: 75.73
+    lane: 2
+  - time: 76.62
+    lane: 3
+  - time: 77.49
+    lane: 2
+  - time: 78.44
+    lane: 0
+  winSceneName: MalukuWinScene
+  loseSceneName: MalukuLoseScene
+  nextStorySceneName: 
+  unlockKeyOnWin: 

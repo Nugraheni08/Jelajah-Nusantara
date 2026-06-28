@@ -32,6 +32,18 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/GameIntroScene.unity
     m_guid: 7904d0c01b5280746905e09fd0446fbd
+  - m_enabled: 1
+    m_path: Assets/Scenes/MalukuScene/MalukuStoryScene.unity
+    m_guid: 86990a6fa54b42c44b30e628d41d9db1
+  - m_enabled: 1
+    m_path: Assets/Scenes/GamePlayScene.unity
+    m_guid: 1e2a7c810716c7a49a26ae4a84f2ef22
+  - m_enabled: 1
+    m_path: Assets/Scenes/MalukuScene/MalukuWinScene.unity
+    m_guid: 57859f04649b00b4f9ee253d8b6ff22b
+  - m_enabled: 1
+    m_path: Assets/Scenes/MalukuScene/MalukuLoseScene.unity
+    m_guid: bb0012461524b944f9590ee8d304b237
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3811959004485663813
 CanvasRenderer:
@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -92,3 +92,8 @@ MonoBehaviour:
   speed: 0
   hitY: 0
   gameplayManager: {fileID: 0}
+  laneSprites:
+  - {fileID: 21300000, guid: dc620e13271920b4b8f4b91a305a52eb, type: 3}
+  - {fileID: 21300000, guid: e02d9ff2bacdb8b49a4f17cd4dc2d2ef, type: 3}
+  - {fileID: 21300000, guid: 59e3b3c319941fb4d83d2f1ae42816a6, type: 3}
+  - {fileID: 21300000, guid: 53719b4fa3fb85a4c97097611848b7ad, type: 3}
