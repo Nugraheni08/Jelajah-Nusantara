@@ -9,6 +9,7 @@ public class NoteSpawner : MonoBehaviour
     public Transform canvas;
     public GameplayManager gameplayManager;
     public AudioSource musicSource;
+    public Image backgroundImage;
 
     [Header("Lane Positions")]
     public float[] laneXPositions = { -270f, -90f, 90f, 270f };
@@ -39,9 +40,10 @@ public class NoteSpawner : MonoBehaviour
         }
 
         // Set background
-        GameObject bg = GameObject.Find("Background");
-        if (bg != null && levelData.background != null)
-            bg.GetComponent<Image>().sprite = levelData.background;
+        if (backgroundImage != null && levelData.background != null)
+        {
+            backgroundImage.sprite = levelData.background;
+        }
 
         // Play musik
         if (musicSource != null && levelData.music != null)
@@ -49,6 +51,9 @@ public class NoteSpawner : MonoBehaviour
             musicSource.clip = levelData.music;
             musicSource.Play();
             songStarted = true;
+
+            // Kasih tau GameplayManager durasi lagu
+            gameplayManager.StartWatchSong(levelData.music.length);
         }
         else
         {

@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlayScene.unity
     guid: 1e2a7c810716c7a49a26ae4a84f2ef22
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/JabarScene/JawaBaratStory.unity
     guid: 9a586099fb390e14a8ba1924d60b36da
   - enabled: 1
@@ -30,17 +30,23 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelectScene.unity
     guid: bc689ad20b08a7c4b95f16a97a55a44a
   - enabled: 1
+    path: Assets/Scenes/JabarScene/JabarStoryScene.unity
+    guid: 4bd9b96907d43cd4f8fc578c3d2d8423
+  - enabled: 0
     path: Assets/Scenes/PapuaScene/PapuaGamePlayScene.unity
     guid: 9c9cd15913426a046afa76e7933e2330
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PapuaScene/PapuaStoryScenelama.unity
     guid: 083b602a12d095041af1895631364e4f
   - enabled: 1
     path: Assets/Scenes/GameIntroScene.unity
     guid: 7904d0c01b5280746905e09fd0446fbd
   - enabled: 1
-    path: Assets/Scenes/Maluku/MalukuStoryScene.unity
+    path: Assets/Scenes/MalukuScene/MalukuStoryScene.unity
     guid: 86990a6fa54b42c44b30e628d41d9db1
+  - enabled: 1
+    path: Assets/Scenes/PapuaScene/PapuaStoryScene.unity
+    guid: e11347445bcd5604d8be2b19ed9dd739
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05

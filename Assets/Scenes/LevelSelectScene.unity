@@ -384,7 +384,7 @@ MonoBehaviour:
   overlayJabar: {fileID: 502490843}
   overlayMaluku: {fileID: 1184007848}
   overlayPapua: {fileID: 468831609}
-  sceneJabar: JawaBaratStory
+  sceneJabar: JabarStoryScene
   sceneMaluku: MalukuStoryScene
   scenePapua: PapuaStoryScene
 --- !u!4 &516124968

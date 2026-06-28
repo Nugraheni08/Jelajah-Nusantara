@@ -216,3 +216,4 @@ MonoBehaviour:
   winSceneName: MalukuWinScene
   loseSceneName: MalukuLoseScene
   nextStorySceneName: 
+  unlockKeyOnWin: 
