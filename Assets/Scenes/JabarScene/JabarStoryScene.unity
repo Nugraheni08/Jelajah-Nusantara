@@ -1580,8 +1580,8 @@ MonoBehaviour:
   countdownText: {fileID: 0}
   audioSource: {fileID: 0}
   noiseSFX: {fileID: 0}
-  noiseStartLine: 3
-  noiseEndLine: 4
+  noiseStartLine: 9
+  noiseEndLine: 9
   flashAtLine: 999
   flashDuration: 1.5
   dialogLines:

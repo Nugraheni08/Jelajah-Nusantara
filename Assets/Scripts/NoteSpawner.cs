@@ -9,6 +9,7 @@ public class NoteSpawner : MonoBehaviour
     public Transform canvas;
     public GameplayManager gameplayManager;
     public AudioSource musicSource;
+    public Image backgroundImage;
 
     [Header("Lane Positions")]
     public float[] laneXPositions = { -270f, -90f, 90f, 270f };
@@ -29,7 +30,6 @@ public class NoteSpawner : MonoBehaviour
         string levelName = PlayerPrefs.GetString("SelectedLevel", "LevelData_Maluku");
         levelData = Resources.Load<LevelData>(levelName);
 
-        // Kalau masih null coba load langsung
         if (levelData == null)
             levelData = Resources.Load<LevelData>("LevelData_Maluku");
 
@@ -40,9 +40,10 @@ public class NoteSpawner : MonoBehaviour
         }
 
         // Set background
-        GameObject bg = GameObject.Find("Background");
-        if (bg != null && levelData.background != null)
-            bg.GetComponent<Image>().sprite = levelData.background;
+        if (backgroundImage != null && levelData.background != null)
+        {
+            backgroundImage.sprite = levelData.background;
+        }
 
         // Play musik
         if (musicSource != null && levelData.music != null)
@@ -59,14 +60,7 @@ public class NoteSpawner : MonoBehaviour
 
         // Load note sounds ke GameplayManager
         if (gameplayManager != null && levelData.noteClips != null)
-        {
             gameplayManager.noteClips = levelData.noteClips;
-            Debug.Log("Note clips loaded: " + levelData.noteClips.Length);
-        }
-        else
-        {
-            Debug.LogWarning("noteClips kosong di LevelData!");
-        }
     }
 
     void Update()
@@ -82,11 +76,10 @@ public class NoteSpawner : MonoBehaviour
             currentBeatIndex++;
         }
 
-        if (currentBeatIndex >= levelData.beatMap.Length &&
-            musicSource != null && !musicSource.isPlaying)
-        {
-            gameplayManager.SongFinished();
-        }
+        // Deteksi "lagu selesai" sengaja TIDAK ditaruh di sini lagi.
+        // GameplayManager.WatchSongEnd() sudah jadi satu-satunya sumber kebenaran
+        // (pakai timer berdasarkan musicSource.clip.length), supaya tidak ada
+        // dua trigger yang berebut pindah scene di waktu yang berbeda.
     }
 
     void SpawnNote(int lane)
