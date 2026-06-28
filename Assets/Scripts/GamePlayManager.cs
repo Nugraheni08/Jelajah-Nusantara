@@ -15,40 +15,45 @@ public class GameplayManager : MonoBehaviour
     public AudioClip[] noteClips;
     public AudioSource noteAudioSource;
 
-    [Header("Lagu Utama")]
-    public AudioSource musicSource; // AudioSource yang muter lagu (Sajojo, dst)
+    [Header("Panel Hasil")]
+    public GameObject panelLevelSelesai;
+    public TextMeshProUGUI scoreTextSelesai;
+    public GameObject panelMisiGagal;
+    public TextMeshProUGUI scoreTextGagal;
 
-    [Header("Navigasi (fallback kalau LevelData tidak ketemu)")]
-    public string fallbackWinScene = "MalukuWinScene";
-    public string fallbackLoseScene = "MalukuLoseScene";
-    public string mainMenuSceneName = "LevelSelectScene";
+    [Header("Navigasi")]
+    public string mainMenuSceneName = "MainMenuScene";
 
     [Header("Settings")]
     public int score = 0;
     public int combo = 0;
-    public int lives;
+    public int lives = 3;
 
     private bool levelEnded = false;
     private LevelData levelData;
 
     void Start()
     {
+        if (panelLevelSelesai != null) panelLevelSelesai.SetActive(false);
+        if (panelMisiGagal != null) panelMisiGagal.SetActive(false);
+
         string levelName = PlayerPrefs.GetString("SelectedLevel", "LevelData_Maluku");
+        Debug.Log("Gameplay menerima = " + levelName);
+
         levelData = Resources.Load<LevelData>(levelName);
 
         if (levelData == null)
-            Debug.LogError("LevelData gagal diload: " + levelName);
+            Debug.LogError("LevelData gagal diload!");
         else
             Debug.Log("Berhasil load = " + levelData.name);
-
-        // Jumlah nyawa ikut jumlah heart icon yang dipasang di scene,
-        // jadi tinggal nambah/kurang object Heart di Inspector tanpa ubah kode.
-        lives = hearts != null ? hearts.Length : 3;
-
-        if (musicSource != null && musicSource.clip != null)
-            StartCoroutine(WatchSongEnd(musicSource.clip.length));
     }
 
+    // Dipanggil oleh NoteSpawner setelah musik diplay
+    public void StartWatchSong(float durasi)
+    {
+        Debug.Log("StartWatchSong dipanggil, durasi: " + durasi);
+        StartCoroutine(WatchSongEnd(durasi));
+    }
 
     void Update()
     {
@@ -86,13 +91,16 @@ public class GameplayManager : MonoBehaviour
             GameOver();
     }
 
-    // Satu-satunya sumber deteksi "lagu selesai" supaya tidak dobel sama NoteSpawner.
     IEnumerator WatchSongEnd(float durasiLagu)
     {
+        Debug.Log("WatchSongEnd mulai, durasi: " + durasiLagu);
         yield return new WaitForSeconds(durasiLagu);
+        Debug.Log("WatchSongEnd selesai! levelEnded=" + levelEnded + " lives=" + lives);
 
         if (!levelEnded && lives > 0)
             LevelSelesai();
+        else if (!levelEnded)
+            GameOver();
     }
 
     void LevelSelesai()
@@ -100,22 +108,14 @@ public class GameplayManager : MonoBehaviour
         if (levelEnded) return;
         levelEnded = true;
 
-        if (musicSource != null) musicSource.Stop();
-
+        Time.timeScale = 1f;
         PlayerPrefs.SetInt("LastScore", score);
         PlayerPrefs.Save();
 
-        // Buka level berikutnya begitu level ini DIMENANGKAN.
-        if (levelData != null && !string.IsNullOrEmpty(levelData.unlockKeyOnWin))
-            PlayerPrefs.SetInt(levelData.unlockKeyOnWin, 1);
-
-        Time.timeScale = 1f;
-
-        string target = (levelData != null && !string.IsNullOrEmpty(levelData.winSceneName))
-            ? levelData.winSceneName
-            : fallbackWinScene;
-
-        SceneManager.LoadScene(target);
+        if (levelData != null && levelData.winSceneName != "")
+            SceneManager.LoadScene(levelData.winSceneName);
+        else
+            SceneManager.LoadScene("MalukuWinScene");
     }
 
     void GameOver()
@@ -123,15 +123,32 @@ public class GameplayManager : MonoBehaviour
         if (levelEnded) return;
         levelEnded = true;
 
-        if (musicSource != null) musicSource.Stop();
-        PlayerPrefs.SetInt("LastScore", score);
-        PlayerPrefs.Save();
         Time.timeScale = 1f;
 
-        string target = (levelData != null && !string.IsNullOrEmpty(levelData.loseSceneName))
-            ? levelData.loseSceneName
-            : fallbackLoseScene;
+        if (levelData != null && levelData.loseSceneName != "")
+            SceneManager.LoadScene(levelData.loseSceneName);
+        else
+            SceneManager.LoadScene("MalukuLoseScene");
+    }
 
-        SceneManager.LoadScene(target);
+    public void OnCobaLagiClicked()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OnKembaliMenuClicked()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    public void OnLanjutClicked()
+    {
+        Time.timeScale = 1f;
+        if (levelData != null && levelData.winSceneName != "")
+            SceneManager.LoadScene(levelData.winSceneName);
+        else
+            SceneManager.LoadScene("MalukuWinScene");
     }
 }

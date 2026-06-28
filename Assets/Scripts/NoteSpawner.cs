@@ -51,6 +51,9 @@ public class NoteSpawner : MonoBehaviour
             musicSource.clip = levelData.music;
             musicSource.Play();
             songStarted = true;
+
+            // Kasih tau GameplayManager durasi lagu
+            gameplayManager.StartWatchSong(levelData.music.length);
         }
         else
         {

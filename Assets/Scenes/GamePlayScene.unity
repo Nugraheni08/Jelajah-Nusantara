@@ -2543,12 +2543,10 @@ MonoBehaviour:
   - {fileID: 1776247612}
   noteClips: []
   noteAudioSource: {fileID: 1745765746}
-  musicSource: {fileID: 0}
   panelLevelSelesai: {fileID: 0}
   scoreTextSelesai: {fileID: 0}
   panelMisiGagal: {fileID: 0}
   scoreTextGagal: {fileID: 0}
-  sceneLanjutan: EndingScenes
   mainMenuSceneName: MainMenuScene
   score: 0
   combo: 0
