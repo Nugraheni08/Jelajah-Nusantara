@@ -36,6 +36,10 @@ public class LevelSelectManager : MonoBehaviour
         cardMaluku.onClick.AddListener(() => SceneManager.LoadScene(sceneMaluku));
         cardPapua.onClick.AddListener(() => SceneManager.LoadScene(scenePapua));
     }
+    public void OnBackClicked()
+        {
+            SceneManager.LoadScene("MainMenuScene");
+        }
 
     void UpdateTampilan()
     {

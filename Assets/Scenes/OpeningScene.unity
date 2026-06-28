@@ -1192,6 +1192,7 @@ MonoBehaviour:
   speakerName: {fileID: 923716473}
   continuePrompt: {fileID: 1083713317}
   dialogBox: {fileID: 716246259}
+  skipButton: {fileID: 0}
   flashOverlay: {fileID: 446686611}
   audioSource: {fileID: 1369221505}
   whooshSFX: {fileID: 8300000, guid: 976f9e504a41126439b2f3cf4f0d39e2, type: 3}

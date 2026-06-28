@@ -17,6 +17,7 @@ public class MalukuDialogManager : MonoBehaviour
     public TextMeshProUGUI speakerName;
     public GameObject continuePrompt;
     public GameObject dialogBox;
+    public GameObject skipButton;
     public Image flashOverlay;
 
     [Header("Misi Panel")]
@@ -271,6 +272,12 @@ public class MalukuDialogManager : MonoBehaviour
     {
         currentLine++;
         ShowLine(currentLine);
+    }
+    public void OnSkipClicked()
+    {
+        StopAllCoroutines();
+        if (skipButton != null) skipButton.SetActive(false);
+        ShowLine(dialogLines.Count);
     }
 }
 
