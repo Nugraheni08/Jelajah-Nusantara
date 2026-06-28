@@ -9,6 +9,11 @@ public class SettingGame : MonoBehaviour
     {
         settingsPanel.SetActive(false);
         Time.timeScale = 1f;
+        
+        // Resume semua audio
+        AudioSource[] allAudio = FindObjectsByType<AudioSource>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        foreach (AudioSource a in allAudio)
+            a.UnPause();
     }
 
     public void Restart()
@@ -27,5 +32,10 @@ public class SettingGame : MonoBehaviour
     {
         settingsPanel.SetActive(true);
         Time.timeScale = 0f;
+        
+        // Pause semua audio
+        AudioSource[] allAudio = FindObjectsByType<AudioSource>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        foreach (AudioSource a in allAudio)
+            a.Pause();
     }
 }

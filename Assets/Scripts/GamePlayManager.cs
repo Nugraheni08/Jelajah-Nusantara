@@ -37,9 +37,6 @@ public class GameplayManager : MonoBehaviour
         if (panelLevelSelesai != null) panelLevelSelesai.SetActive(false);
         if (panelMisiGagal != null) panelMisiGagal.SetActive(false);
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(noteAudioSource);
-
         string levelName = PlayerPrefs.GetString("SelectedLevel", "LevelData_Maluku");
         Debug.Log("Gameplay menerima = " + levelName);
 
