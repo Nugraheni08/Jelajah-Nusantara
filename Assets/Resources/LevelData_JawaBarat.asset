@@ -163,56 +163,6 @@ MonoBehaviour:
     lane: 1
   - time: 58
     lane: 2
-  - time: 58.8
-    lane: 3
-  - time: 59.6
-    lane: 2
-  - time: 60.4
-    lane: 0
-  - time: 61.2
-    lane: 2
-  - time: 62
-    lane: 1
-  - time: 62.8
-    lane: 2
-  - time: 63.6
-    lane: 3
-  - time: 64.4
-    lane: 2
-  - time: 65.2
-    lane: 0
-  - time: 66
-    lane: 2
-  - time: 66.8
-    lane: 1
-  - time: 67.6
-    lane: 2
-  - time: 68.4
-    lane: 3
-  - time: 69.2
-    lane: 2
-  - time: 70
-    lane: 0
-  - time: 70.8
-    lane: 2
-  - time: 71.6
-    lane: 1
-  - time: 72.4
-    lane: 2
-  - time: 73.2
-    lane: 3
-  - time: 74
-    lane: 2
-  - time: 74.8
-    lane: 0
-  - time: 75.6
-    lane: 2
-  - time: 76.4
-    lane: 1
-  - time: 77.2
-    lane: 2
-  - time: 78
-    lane: 3
   winSceneName: JawaBaratWinScene
   loseSceneName: JawaBaratLoseScene
   nextStorySceneName: 
