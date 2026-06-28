@@ -49,6 +49,7 @@ public class JabarWinManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip dingSFX;
     public AudioClip angklungMusic;
+    public AudioClip bgMusicClip; // ← musik saat NPC ngomong
 
     [Header("Settings")]
     public string nextSceneName = "MalukuStoryScene";
@@ -133,6 +134,14 @@ public class JabarWinManager : MonoBehaviour
 
         if (dialogBox != null) dialogBox.SetActive(true);
 
+        // Play bgMusic saat NPC mulai ngomong
+        if (audioSource != null && bgMusicClip != null)
+        {
+            audioSource.clip = bgMusicClip;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+
         noiseDialogLines = new List<WinDialogLine>
         {
             new WinDialogLine("Noise", "Tidak mungkin..."),
@@ -172,6 +181,10 @@ public class JabarWinManager : MonoBehaviour
         inputBlocked = true;
         if (continuePrompt != null) continuePrompt.SetActive(false);
 
+        // Stop bgMusic saat Noise menghilang
+        if (audioSource != null)
+            audioSource.Stop();
+
         if (characterImageRight != null)
         {
             float t = 0f;
@@ -202,6 +215,7 @@ public class JabarWinManager : MonoBehaviour
         if (audioSource != null && angklungMusic != null)
         {
             audioSource.clip = angklungMusic;
+            audioSource.loop = false;
             audioSource.Play();
         }
 
@@ -346,8 +360,8 @@ public class JabarWinManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f);
-        PlayerPrefs.SetInt("MalukuUnlocked", 1);   
-        PlayerPrefs.Save();                         
+        PlayerPrefs.SetInt("MalukuUnlocked", 1);
+        PlayerPrefs.Save();
         SceneManager.LoadScene(nextSceneName);
     }
 

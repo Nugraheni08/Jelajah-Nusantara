@@ -25,6 +25,9 @@ public class DialogManager : MonoBehaviour
     public int noiseStartLine = 7;
     public int noiseEndLine = 9;
 
+    [Header("Audio per Line")]
+    public AudioClip[] lineAudioClips;
+
     [Header("Flash Settings")]
     public int flashAtLine = 15;
     public float flashDuration = 1.5f;
@@ -103,6 +106,7 @@ public class DialogManager : MonoBehaviour
         if (flashOverlay != null && index == flashAtLine)
             StartCoroutine(FlashEffect());
 
+        // Noise SFX per range line
         if (audioSource != null && noiseSFX != null)
         {
             if (index >= noiseStartLine && index <= noiseEndLine)
@@ -123,6 +127,10 @@ public class DialogManager : MonoBehaviour
                 }
             }
         }
+
+        // Play audio khusus per line
+        if (lineAudioClips != null && index < lineAudioClips.Length && lineAudioClips[index] != null)
+            audioSource.PlayOneShot(lineAudioClips[index]);
 
         StartCoroutine(TypeText(line.dialogText));
     }
