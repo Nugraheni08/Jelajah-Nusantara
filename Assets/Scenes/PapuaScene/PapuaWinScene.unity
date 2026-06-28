@@ -1297,7 +1297,7 @@ MonoBehaviour:
   ranuImagePeta: {fileID: 85086428}
   dialogTextPeta: {fileID: 282084553}
   speakerNamePeta: {fileID: 1824739926}
-  continuePromptPeta: {fileID: 1008644217}
+  continuePromptPeta: {fileID: 1707013037}
   dialogBoxPeta: {fileID: 1565673160}
   wargaSprite: {fileID: 21300000, guid: 9ae2c5517a831e2408f28f332803f3ca, type: 3}
   aksaSprite: {fileID: 21300000, guid: 428ee6664c472034a90efe1ac93139c0, type: 3}
@@ -2182,8 +2182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u25B6"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
+  m_sharedMaterial: {fileID: -5080304883722848397, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
