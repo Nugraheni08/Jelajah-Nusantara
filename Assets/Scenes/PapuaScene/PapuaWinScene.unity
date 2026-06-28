@@ -204,7 +204,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 364651561}
-        m_TargetAssemblyTypeName: MalukuWinManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PapuaWinManager, Assembly-CSharp
         m_MethodName: OnUlangLevel
         m_Mode: 1
         m_Arguments:
@@ -782,7 +782,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9e63b433448a954f8c21930e07c1a28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 355673646}
   - component: {fileID: 355673645}
   m_Layer: 5
-  m_Name: TitleToto
+  m_Name: TitleTifa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Totobuang
+  m_text: Tifa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ae565e05e8550747bd94d92c16fb2cc, type: 2}
   m_sharedMaterial: {fileID: 4441102033581429184, guid: 6ae565e05e8550747bd94d92c16fb2cc, type: 2}
@@ -1275,9 +1275,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 364651559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8a672b6b41e0bd42916770cadac0842, type: 3}
+  m_Script: {fileID: 11500000, guid: 036593ea27b5fde4b8a05e5d37c788c1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MalukuWinManager
+  m_EditorClassIdentifier: Assembly-CSharp::PapuaWinManager
   background: {fileID: 206451528}
   characterImageLeft: {fileID: 2128162955}
   characterImageRight: {fileID: 1818789170}
@@ -1288,25 +1288,24 @@ MonoBehaviour:
   panelResult: {fileID: 438393171}
   btnLanjut: {fileID: 461313285}
   btnUlang: {fileID: 72965883}
-  bgSunset: {fileID: 21300000, guid: d9e63b433448a954f8c21930e07c1a28, type: 3}
+  bgSunset: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
   noiseSprite: {fileID: 21300000, guid: cd314e8326ac22a4c917a458d1e3a42c, type: 3}
-  wargaSprite: {fileID: 21300000, guid: 9830e492b3637cc4b9bb2ac4b8c10da2, type: 3}
-  ranuSprite: {fileID: 21300000, guid: d0d890fc77fb9524c8f969c917670a5f, type: 3}
-  panelTotobuang: {fileID: 1021330672}
+  panelTifa: {fileID: 1021330672}
   panelPeta: {fileID: 402051787}
-  ranuImagePeta: {fileID: 85086428}
   wargaImagePeta: {fileID: 1941296437}
+  aksaImagePeta: {fileID: 1422346027}
+  ranuImagePeta: {fileID: 85086428}
   dialogTextPeta: {fileID: 282084553}
   speakerNamePeta: {fileID: 1824739926}
   continuePromptPeta: {fileID: 1008644217}
   dialogBoxPeta: {fileID: 1565673160}
-  unlockText: {fileID: 1236244464}
-  petaKosong: {fileID: 21300000, guid: 8d1a1ebab5fe0da42a74ffb103ba2e27, type: 3}
-  petaUnlock: {fileID: 21300000, guid: d4a8b198efc3490478d65f3cad09ce80, type: 3}
+  wargaSprite: {fileID: 21300000, guid: 9ae2c5517a831e2408f28f332803f3ca, type: 3}
+  aksaSprite: {fileID: 21300000, guid: 428ee6664c472034a90efe1ac93139c0, type: 3}
+  ranuSprite: {fileID: 21300000, guid: d0d890fc77fb9524c8f969c917670a5f, type: 3}
   audioSource: {fileID: 0}
   dingSFX: {fileID: 0}
-  totobuangMusic: {fileID: 0}
-  nextSceneName: MainMenu
+  tifaMusic: {fileID: 0}
+  nextSceneName: EndingScene
   typingSpeed: 0.04
 --- !u!1 &402051787
 GameObject:
@@ -1378,6 +1377,7 @@ RectTransform:
   m_Children:
   - {fileID: 1236244466}
   - {fileID: 85086430}
+  - {fileID: 1422346026}
   - {fileID: 1941296439}
   - {fileID: 1565673163}
   m_Father: {fileID: 1896207374}
@@ -1571,7 +1571,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 364651561}
-        m_TargetAssemblyTypeName: MalukuWinManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PapuaWinManager, Assembly-CSharp
         m_MethodName: OnLanjutResult
         m_Mode: 1
         m_Arguments:
@@ -1814,7 +1814,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Narator
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c04f650ec8363a4da2bad5fc9cc0d9b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6ae565e05e8550747bd94d92c16fb2cc, type: 2}
   m_sharedMaterial: {fileID: 4441102033581429184, guid: 0c04f650ec8363a4da2bad5fc9cc0d9b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   m_margin: {x: 82.87619, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &652902897
@@ -2182,8 +2182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u25B6"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
-  m_sharedMaterial: {fileID: -5080304883722848397, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2272,12 +2272,12 @@ GameObject:
   - component: {fileID: 1021330675}
   - component: {fileID: 1021330674}
   m_Layer: 5
-  m_Name: Panel_Totobuang
+  m_Name: Panel_Tifa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1021330673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2568,7 +2568,7 @@ GameObject:
   - component: {fileID: 1250054742}
   - component: {fileID: 1250054745}
   m_Layer: 5
-  m_Name: BtnLanjutToto
+  m_Name: BtnLanjutTifa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2639,8 +2639,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 364651561}
-        m_TargetAssemblyTypeName: MalukuWinManager, Assembly-CSharp
-        m_MethodName: OnLanjutTotobuang
+        m_TargetAssemblyTypeName: PapuaWinManager, Assembly-CSharp
+        m_MethodName: OnLanjutTifa
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2832,6 +2832,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1422346025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1422346026}
+  - component: {fileID: 1422346028}
+  - component: {fileID: 1422346027}
+  m_Layer: 5
+  m_Name: AksaImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1422346026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422346025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.775, y: 2.775, z: 2.775}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 402051790}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 219, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1422346027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422346025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 428ee6664c472034a90efe1ac93139c0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1422346028
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422346025}
+  m_CullTransparentMesh: 1
 --- !u!1 &1426932068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,7 +3119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.9294128, y: -129.51001}
+  m_AnchoredPosition: {x: -3.9294434, y: -129.51001}
   m_SizeDelta: {x: 2040, y: 880.0481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1611918460
@@ -3183,8 +3258,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Totobuang adalah alat musik tradisional \ndari Maluku. Terbuat dari perunggu
-    dan \ndimainkan dengan cara dipukul."
+  m_text: Alat musik pukul berbentuk tabung memanjang yang diukir dengan motif magis
+    leluhur. Terbuat dari kayu utuh yang dikosongkan isinya, lalu ditutup dengan
+    kulit rusa atau biawak.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
   m_sharedMaterial: {fileID: -5080304883722848397, guid: eafa5d967297ba748b3ca8feb2d3cda1, type: 2}
@@ -3211,14 +3287,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3250,7 +3326,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -67.91293, y: 0, z: -80.64667, w: -189.94415}
+  m_margin: {x: -67.91293, y: 0, z: -67.51994, w: -189.94415}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3276,7 +3352,7 @@ GameObject:
   - component: {fileID: 1680386774}
   - component: {fileID: 1680386773}
   m_Layer: 5
-  m_Name: TotobuangSprite
+  m_Name: TifaSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3321,7 +3397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa4067b74ee480a45aa930b1482fd2c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e977513e824dcb408086b75eaac525e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3693,8 +3769,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Narator
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0c04f650ec8363a4da2bad5fc9cc0d9b, type: 2}
-  m_sharedMaterial: {fileID: 4441102033581429184, guid: 0c04f650ec8363a4da2bad5fc9cc0d9b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6ae565e05e8550747bd94d92c16fb2cc, type: 2}
+  m_sharedMaterial: {fileID: 4441102033581429184, guid: 6ae565e05e8550747bd94d92c16fb2cc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3987,7 +4063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9830e492b3637cc4b9bb2ac4b8c10da2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ae2c5517a831e2408f28f332803f3ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/JabarScene/JawaBaratStory.unity
     guid: 9a586099fb390e14a8ba1924d60b36da
   - enabled: 1
-    path: Assets/Scenes/EndingScenes.unity
+    path: Assets/Scenes/EndingScene.unity
     guid: 48d4d66f965eca34d836174afcd2ed03
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
