@@ -3885,7 +3885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   settingsPanel: {fileID: 1827520325}
-  bgMusic: {fileID: 0}
+  bgMusic: {fileID: 2027454659}
 --- !u!4 &1821597353
 Transform:
   m_ObjectHideFlags: 0

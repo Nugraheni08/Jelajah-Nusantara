@@ -15,6 +15,7 @@ public class DialogManager : MonoBehaviour
     public TextMeshProUGUI speakerName;
     public GameObject continuePrompt;
     public GameObject dialogBox;
+    public GameObject skipButton;
     public Image flashOverlay;
 
     [Header("Audio")]
@@ -48,6 +49,8 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         continuePrompt.SetActive(false);
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.RegisterSFXSource(audioSource);
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
         ShowLine(currentLine);
@@ -195,6 +198,12 @@ public class DialogManager : MonoBehaviour
     {
         currentLine++;
         ShowLine(currentLine);
+    }
+    public void OnSkipClicked()
+    {
+        StopAllCoroutines();
+        if (skipButton != null) skipButton.SetActive(false);
+        ShowLine(dialogLines.Count);
     }
 }
 
