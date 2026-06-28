@@ -7,7 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     [Header("Panels")]
     public GameObject settingsPanel;
-    public GameObject creditsPanel;
 
     [Header("Audio")]
     public AudioSource bgMusic;
@@ -15,7 +14,6 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         if (settingsPanel != null) settingsPanel.SetActive(false);
-        if (creditsPanel != null) creditsPanel.SetActive(false);
     }
 
     public void OnMulaiPermainan()
@@ -28,10 +26,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("LevelSelect");
     }
 
+    // Diubah: pindah ke scene CreditScene, bukan buka panel popup
     public void OnCredits()
     {
-        if (creditsPanel != null)
-            creditsPanel.SetActive(true);
+        SceneManager.LoadScene("CreditScene");
     }
 
     public void OnPengaturan()
@@ -52,6 +50,5 @@ public class MainMenu : MonoBehaviour
     public void TutupPanel()
     {
         if (settingsPanel != null) settingsPanel.SetActive(false);
-        if (creditsPanel != null) creditsPanel.SetActive(false);
     }
 }

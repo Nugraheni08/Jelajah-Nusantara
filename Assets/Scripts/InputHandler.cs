@@ -14,29 +14,38 @@ public class InputHandler : MonoBehaviour
         if (Keyboard.current.kKey.wasPressedThisFrame) CheckHit(3);
     }
 
-    void CheckHit(int lane)
-    {
-        Note[] notes = FindObjectsByType<Note>(FindObjectsSortMode.None);
-        Note closestNote = null;
-        float closestDist = hitRange;
+void CheckHit(int lane)
+{
+    Note[] notes = FindObjectsByType<Note>(FindObjectsInactive.Exclude);
+    Debug.Log("CheckHit lane=" + lane + " | notes found=" + notes.Length);
+    
+    Note closestNote = null;
+    float closestDist = hitRange;
 
-        foreach (Note note in notes)
+    foreach (Note note in notes)
+    {
+        if (note.lane == lane)
         {
-            if (note.lane == lane)
+            RectTransform rt = note.GetComponent<RectTransform>();
+            float dist = Mathf.Abs(rt.anchoredPosition.y - (-280f));
+            Debug.Log("Note di lane=" + note.lane + " dist=" + dist + " hitRange=" + hitRange);
+            if (dist < closestDist)
             {
-                RectTransform rt = note.GetComponent<RectTransform>();
-                float dist = Mathf.Abs(rt.anchoredPosition.y - (-280f));
-                if (dist < closestDist)
-                {
-                    closestDist = dist;
-                    closestNote = note;
-                }
+                closestDist = dist;
+                closestNote = note;
             }
         }
-
-        if (closestNote != null)
-            closestNote.Hit();
-        else
-            gameplayManager.ResetCombo();
     }
+
+    if (closestNote != null)
+    {
+        Debug.Log("HIT note di lane=" + lane);
+        closestNote.Hit();
+    }
+    else
+    {
+        Debug.Log("MISS di lane=" + lane);
+        gameplayManager.ResetCombo();
+    }
+}
 }

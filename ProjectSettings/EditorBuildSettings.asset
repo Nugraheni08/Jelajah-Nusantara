@@ -33,16 +33,17 @@ EditorBuildSettings:
     path: Assets/Scenes/PapuaScene/PapuaGamePlayScene.unity
     guid: 9c9cd15913426a046afa76e7933e2330
   - enabled: 1
-    path: Assets/Scenes/PapuaScene/PapuaStoryScene.unity
+    path: Assets/Scenes/PapuaScene/PapuaStoryScenelama.unity
     guid: 083b602a12d095041af1895631364e4f
   - enabled: 1
     path: Assets/Scenes/GameIntroScene.unity
     guid: 7904d0c01b5280746905e09fd0446fbd
   - enabled: 1
-    path: Assets/Scenes/MalukuStoryScene.unity
+    path: Assets/Scenes/Maluku/MalukuStoryScene.unity
     guid: 86990a6fa54b42c44b30e628d41d9db1
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

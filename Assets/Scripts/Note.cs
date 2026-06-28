@@ -29,7 +29,8 @@ public class Note : MonoBehaviour
 
     public void Hit()
     {
-        AudioManager.Instance.PlayTifaHit();
+        Debug.Log("Note.Hit() dipanggil! lane=" + lane);
+        gameplayManager.PlayNoteSound(lane);
         gameplayManager.AddScore(100);
         Destroy(gameObject);
     }

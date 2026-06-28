@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
 
+
 public class MalukuDialogManager : MonoBehaviour
 {
     [Header("UI References")]
@@ -23,6 +24,7 @@ public class MalukuDialogManager : MonoBehaviour
     public TextMeshProUGUI misiTitle;
     public TextMeshProUGUI misiDesc;
     public GameObject misiButton;
+    public GameObject darkOverlay;
 
     [Header("Countdown Panel")]
     public GameObject countdownPanel;
@@ -31,8 +33,8 @@ public class MalukuDialogManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip noiseSFX;
-    public int noiseStartLine = 2;
-    public int noiseEndLine = 3;
+    public int noiseStartLine = 3;
+    public int noiseEndLine = 4;
 
     [Header("Flash Settings")]
     public int flashAtLine = 999;
@@ -43,7 +45,8 @@ public class MalukuDialogManager : MonoBehaviour
 
     [Header("Settings")]
     public float typingSpeed = 0.03f;
-    public string nextSceneName = "MalukuGameplay";
+    public string gameplaySceneName = "GameplayScene";
+    public string levelDataKey = "LevelData_Maluku"; // ganti sesuai level: LevelData_JawaBarat / LevelData_Papua
 
     private int currentLine = 0;
     private bool isTyping = false;
@@ -53,12 +56,19 @@ public class MalukuDialogManager : MonoBehaviour
     void Start()
     {
         continuePrompt.SetActive(false);
+
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
+
         if (misiPanel != null)
             misiPanel.SetActive(false);
+
+        if (darkOverlay != null)
+            darkOverlay.SetActive(false);
+
         if (countdownPanel != null)
             countdownPanel.SetActive(false);
+
         ShowLine(currentLine);
     }
 
@@ -158,42 +168,56 @@ public class MalukuDialogManager : MonoBehaviour
 
     void ShowMisiPanel()
     {
+        Debug.Log("SHOW MISI PANEL");
+
         waitingForMisi = true;
+
         continuePrompt.SetActive(false);
         dialogBox.SetActive(false);
 
-        if (misiPanel != null)
-        {
-            misiPanel.SetActive(true);
-            if (misiTitle != null)
-                misiTitle.text = "MISI BARU";
-            if (misiDesc != null)
-                misiDesc.text = "Pulihkan Harmoni Totobuang!";
-        }
+        darkOverlay.SetActive(true);
+        misiPanel.SetActive(true);
     }
 
     public void OnMisiButtonClick()
     {
-        misiPanel.SetActive(false);
+        PlayerPrefs.SetString("SelectedLevel", levelDataKey);
+        PlayerPrefs.Save();
+
+        Debug.Log("Disimpan = " + PlayerPrefs.GetString("SelectedLevel"));
+
+        if (misiPanel != null)
+            misiPanel.SetActive(false);
+
+        if (darkOverlay != null)
+            darkOverlay.SetActive(false);
+
         StartCoroutine(CountdownAndStart());
     }
 
     IEnumerator CountdownAndStart()
     {
+        Debug.Log("Countdown dimulai");
+
         if (countdownPanel != null)
         {
             countdownPanel.SetActive(true);
             string[] counts = { "3", "2", "1", "START!" };
+
             foreach (string c in counts)
             {
                 if (countdownText != null)
                     countdownText.text = c;
+
                 yield return new WaitForSeconds(1f);
             }
+
             countdownPanel.SetActive(false);
         }
 
-        SceneManager.LoadScene(nextSceneName);
+        Debug.Log("Load Scene: " + gameplaySceneName);
+
+        SceneManager.LoadScene(gameplaySceneName);
     }
 
     IEnumerator FlashEffect()
