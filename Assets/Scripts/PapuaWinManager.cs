@@ -374,6 +374,3 @@ public class PapuaWinManager : MonoBehaviour
         if (continuePromptPeta != null) continuePromptPeta.SetActive(true);
     }
 }
-
-// CATATAN: class WinDialogLine TIDAK ditulis ulang di sini karena sudah ada
-// (public, global) di file MalukuWinManager.cs.

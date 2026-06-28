@@ -186,5 +186,3 @@ public class PapuaLoseManager : MonoBehaviour
     }
 }
 
-// CATATAN: class LoseDialogLine TIDAK ditulis ulang di sini karena sudah ada
-// (public, global) di file MalukuLoseManager.cs.
