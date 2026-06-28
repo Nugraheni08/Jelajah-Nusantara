@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   levelName: Jawa Barat
   background: {fileID: 21300000, guid: 605e740745c1beb4287306c0e34b9fcf, type: 3}
-  music: {fileID: 8300000, guid: 5ed6d2517caff1f4ea1115b4fff00ce4, type: 3}
+  music: {fileID: 8300000, guid: 25df5c676b3354b4e89d8b16c9e19671, type: 3}
   noteClips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 190a0cdecc8dd3d4cb198c547ab45b22, type: 3}
+  - {fileID: 8300000, guid: 190a0cdecc8dd3d4cb198c547ab45b22, type: 3}
+  - {fileID: 8300000, guid: 190a0cdecc8dd3d4cb198c547ab45b22, type: 3}
+  - {fileID: 8300000, guid: 190a0cdecc8dd3d4cb198c547ab45b22, type: 3}
   beatMap:
   - time: 2
     lane: 2
