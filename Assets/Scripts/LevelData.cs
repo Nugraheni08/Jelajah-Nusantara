@@ -16,9 +16,14 @@ public class LevelData : ScriptableObject
     public BeatNote[] beatMap;
 
     [Header("Scene Names")]
-    public string winSceneName;
-    public string loseSceneName;
-    public string nextStorySceneName;
+    public string winSceneName;          // contoh: "JawaBaratWinScene"
+    public string loseSceneName;         // contoh: "JawaBaratLoseScene"
+    public string nextStorySceneName;    // cutscene akhir level ini, contoh: "JabarCutsceneAkhir" (kosongkan kalau belum ada)
+
+    [Header("Progression (dipakai saat MENANG)")]
+    [Tooltip("Key PlayerPrefs yang akan di-set ke 1 saat level ini DIMENANGKAN. " +
+             "Contoh: level Jawa Barat -> isi 'MalukuUnlocked'. Level terakhir (Papua) -> kosongkan.")]
+    public string unlockKeyOnWin;
 }
 
 [System.Serializable]

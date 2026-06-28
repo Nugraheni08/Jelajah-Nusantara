@@ -29,7 +29,6 @@ public class NoteSpawner : MonoBehaviour
         string levelName = PlayerPrefs.GetString("SelectedLevel", "LevelData_Maluku");
         levelData = Resources.Load<LevelData>(levelName);
 
-        // Kalau masih null coba load langsung
         if (levelData == null)
             levelData = Resources.Load<LevelData>("LevelData_Maluku");
 
@@ -59,14 +58,7 @@ public class NoteSpawner : MonoBehaviour
 
         // Load note sounds ke GameplayManager
         if (gameplayManager != null && levelData.noteClips != null)
-        {
             gameplayManager.noteClips = levelData.noteClips;
-            Debug.Log("Note clips loaded: " + levelData.noteClips.Length);
-        }
-        else
-        {
-            Debug.LogWarning("noteClips kosong di LevelData!");
-        }
     }
 
     void Update()
@@ -82,11 +74,10 @@ public class NoteSpawner : MonoBehaviour
             currentBeatIndex++;
         }
 
-        if (currentBeatIndex >= levelData.beatMap.Length &&
-            musicSource != null && !musicSource.isPlaying)
-        {
-            gameplayManager.SongFinished();
-        }
+        // Deteksi "lagu selesai" sengaja TIDAK ditaruh di sini lagi.
+        // GameplayManager.WatchSongEnd() sudah jadi satu-satunya sumber kebenaran
+        // (pakai timer berdasarkan musicSource.clip.length), supaya tidak ada
+        // dua trigger yang berebut pindah scene di waktu yang berbeda.
     }
 
     void SpawnNote(int lane)
