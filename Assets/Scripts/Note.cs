@@ -29,6 +29,7 @@ public class Note : MonoBehaviour
 
     public void Hit()
     {
+        AudioManager.Instance.PlayTifaHit();
         gameplayManager.AddScore(100);
         Destroy(gameObject);
     }
