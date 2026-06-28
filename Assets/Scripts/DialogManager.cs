@@ -34,6 +34,9 @@ public class DialogManager : MonoBehaviour
     [Header("Dialog Data")]
     public List<DialogLine> dialogLines;
 
+    [Header("SFX")]
+    public AudioClip clickSFX;
+
     [Header("Settings")]
     public float typingSpeed = 0.03f;
     public string nextSceneName = "GameIntroScene";
@@ -56,6 +59,10 @@ public class DialogManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            // Pakai audioSource langsung, tidak perlu AudioManager
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
