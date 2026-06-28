@@ -14,21 +14,33 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         if (settingsPanel != null) settingsPanel.SetActive(false);
+
+        if (bgMusic != null && !bgMusic.isPlaying)
+            bgMusic.Play();
+    }
+
+    void StopAllAudio()
+    {
+        AudioSource[] allAudio = FindObjectsByType<AudioSource>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (AudioSource a in allAudio)
+            a.Stop();
     }
 
     public void OnMulaiPermainan()
     {
+        StopAllAudio();
         SceneManager.LoadScene("OpeningScene");
     }
 
     public void OnPilihLevel()
     {
+        StopAllAudio();
         SceneManager.LoadScene("LevelSelect");
     }
 
-    // Diubah: pindah ke scene CreditScene, bukan buka panel popup
     public void OnCredits()
     {
+        StopAllAudio();
         SceneManager.LoadScene("CreditScene");
     }
 
@@ -40,6 +52,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnKeluar()
     {
+        StopAllAudio();
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else

@@ -49,7 +49,7 @@ public class MalukuWinManager : MonoBehaviour
     public AudioClip totobuangMusic;
 
     [Header("Settings")]
-    public string nextSceneName = "MainMenu";
+    public string nextSceneName = "PapuaStoryScene";
     public float typingSpeed = 0.04f;
 
     private int currentLine = 0;

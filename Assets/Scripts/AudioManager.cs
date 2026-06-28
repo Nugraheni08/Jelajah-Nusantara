@@ -84,4 +84,9 @@ public class AudioManager : MonoBehaviour
         musicSource.loop = loop;
         musicSource.Play();
     }
+    public void StopMusic()
+    {
+        if (musicSource != null)
+            musicSource.Stop();
+    }
 }

@@ -215,5 +215,5 @@ MonoBehaviour:
     lane: 0
   winSceneName: MalukuWinScene
   loseSceneName: MalukuLoseScene
-  nextStorySceneName: 
+  nextStorySceneName: PapuaStoryScene
   unlockKeyOnWin: 

@@ -813,8 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogManager
   background: {fileID: 1851023764}
-  characterImageLeft: {fileID: 525763778}
-  characterImageRight: {fileID: 1920453471}
+  characterImage: {fileID: 0}
   dialogText: {fileID: 1722191617}
   speakerName: {fileID: 2051113581}
   continuePrompt: {fileID: 221223826}
@@ -830,62 +829,51 @@ MonoBehaviour:
   dialogLines:
   - speakerName: 
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 0}
+    characterSprite: {fileID: 0}
     dialogText: Cahaya membentuk makhluk kecil
   - speakerName: Ranu
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"Akhirnya... seseorang mendengarkannya."'
   - speakerName: Aksa
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 0}
+    characterSprite: {fileID: 0}
     dialogText: '"SIAPA KAMU?!"'
   - speakerName: Ranu
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: 21de816aa8ae34043a5c97738347ede4, type: 3}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"Hai, aku Ranu, penjaga harmoni Nusantara."'
   - speakerName: Aksa
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"...harmoni?"'
   - speakerName: Ranu
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
-    characterSpriteRight: {fileID: 21300000, guid: c58b1217c75d4d444930058f5f36d915, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"Iya, harmoni nusantara, tetapi musik tradisional Indonesia sekarang
       sudah mulai dilupakan."'
   - speakerName: Ranu
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: 21de816aa8ae34043a5c97738347ede4, type: 3}
-    characterSpriteRight: {fileID: 21300000, guid: c58b1217c75d4d444930058f5f36d915, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"Jika ini terus terjadi, harmoni nusantara akan hilang."'
   - speakerName: Aksa
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: fd502585b21ff9541a017650c91f25f1, type: 3}
-    characterSpriteRight: {fileID: 21300000, guid: c58b1217c75d4d444930058f5f36d915, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"Terus... aku harus apa?"'
   - speakerName: Ranu
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"Pergilah ke daerah-daerah yang akan aku tunjukkan."'
   - speakerName: Ranu
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"Pelajari iramanya."'
   - speakerName: Ranu
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
-    characterSpriteRight: {fileID: 21300000, guid: d0d890fc77fb9524c8f969c917670a5f, type: 3}
+    characterSprite: {fileID: 0}
     dialogText: '"Dan bangkitkan kembali harmoninya."'
   typingSpeed: 0.03
-  nextSceneName: MainMenu
+  nextSceneName: JabarStoryScene
 --- !u!1 &1536829573
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class DialogManagerDuo : MonoBehaviour
 
     [Header("Settings")]
     public float typingSpeed = 0.03f;
-    public string nextSceneName = "MainMenu";
+    public string nextSceneName = "JabarStoryScene";
 
     private int currentLine = 0;
     private bool isTyping = false;

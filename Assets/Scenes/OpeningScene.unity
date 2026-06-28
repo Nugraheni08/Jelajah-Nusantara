@@ -1201,76 +1201,76 @@ MonoBehaviour:
   flashAtLine: 15
   flashDuration: 5
   dialogLines:
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: f0a948ad8060985438b8e87424ddfe0e, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Dunia berubah sangat cepat beriringan dengan teknologi
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: f0a948ad8060985438b8e87424ddfe0e, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Di jaman ini orang-orang lebih suka musik elektronik.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: f0a948ad8060985438b8e87424ddfe0e, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Akibatnya, musik tradisional Nusantara perlahan dilupakan.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: f0a948ad8060985438b8e87424ddfe0e, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Tidak ada lagi suara angklung, totobuang, atau tifa.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: f0a948ad8060985438b8e87424ddfe0e, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Alat musik dan musik tradisional ditinggalkan begitu saja.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: f0a948ad8060985438b8e87424ddfe0e, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Bahkan banyak orang yang tidak mengenalnya lagi.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: f0a948ad8060985438b8e87424ddfe0e, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Karena budaya mulai hilang, muncul energi misterius bernama...
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: 1f90751c80e12b9499bd9b35eafc9c32, type: 3}
     characterSprite: {fileID: 0}
     dialogText: '"NOISE"'
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: 1f90751c80e12b9499bd9b35eafc9c32, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Noise membuat manusia melupakan harmoni musik tradisional.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: 1f90751c80e12b9499bd9b35eafc9c32, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Semakin kuat Noise, semakin banyak budaya yang menghilang.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Di sebuah kota kecil...
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
     characterSprite: {fileID: 21300000, guid: 428ee6664c472034a90efe1ac93139c0, type: 3}
     dialogText: Seorang mahasiswa bernama Aditya Prakasa (Aksa) sedang membersihkan
       gudang di rumah peninggalan kakeknya.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
     characterSprite: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
     dialogText: Disana ia menemukan sebuah kotak tua, karena penasaran Aksa pun membukanya.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
     characterSprite: {fileID: 21300000, guid: 21de816aa8ae34043a5c97738347ede4, type: 3}
     dialogText: Saat membuka kotak itu, ia menemukan alat musik misterius.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: 98128b313f6718b468e3a7bfcba3a270, type: 3}
     characterSprite: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
     dialogText: "Ketika disentuh\u2014"
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: e0762ba225fa88c48881dae2dfcce2d6, type: 3}
     characterSprite: {fileID: 0}
     dialogText: WHOOOOOSHH!!
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: e0762ba225fa88c48881dae2dfcce2d6, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Cahaya memenuhi ruangan.
-  - speakerName: Narator
+  - speakerName: 
     background: {fileID: 21300000, guid: e0762ba225fa88c48881dae2dfcce2d6, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Dan sejak malam itu, perjalanan Aksa dimulai.

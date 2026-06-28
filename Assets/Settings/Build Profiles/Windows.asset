@@ -56,6 +56,15 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/MalukuScene/MalukuLoseScene.unity
     m_guid: bb0012461524b944f9590ee8d304b237
+  - m_enabled: 1
+    m_path: Assets/Scenes/PapuaScene/PapuaStoryScene.unity
+    m_guid: e11347445bcd5604d8be2b19ed9dd739
+  - m_enabled: 1
+    m_path: Assets/Scenes/PapuaScene/PapuaWinScreen.unity
+    m_guid: c485dd033be31934f9d78c697f595a40
+  - m_enabled: 1
+    m_path: Assets/Scenes/PapuaScene/PapuaLoseScreen.unity
+    m_guid: aaa3a7e87009c404b8803155c414d9d2
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
