@@ -197,6 +197,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   dingSFX: {fileID: 0}
   angklungMusic: {fileID: 0}
+  bgMusicClip: {fileID: 0}
   nextSceneName: LevelSelectScene
   typingSpeed: 0.04
 --- !u!1 &86279909
