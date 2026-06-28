@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   levelName: Papua
   background: {fileID: 21300000, guid: 4a5d708204a1bc1408f96e1a075bd6f4, type: 3}
-  music: {fileID: 8300000, guid: ce25f4b64feeb5240b99a1032d46bd24, type: 3}
+  music: {fileID: 8300000, guid: 940fd655ec7af134ca7a3b5733257530, type: 3}
   noteClips:
   - {fileID: 8300000, guid: a9aae35ebaf8cd14883351b95e4106b6, type: 3}
   - {fileID: 8300000, guid: a9aae35ebaf8cd14883351b95e4106b6, type: 3}
