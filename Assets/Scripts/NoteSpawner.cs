@@ -14,6 +14,9 @@ public class NoteSpawner : MonoBehaviour
     [Header("Lane Positions")]
     public float[] laneXPositions = { -270f, -90f, 90f, 270f };
 
+    [Header("Note Sprites per Lane")]
+    public Sprite[] laneSprites; // 4 sprite, index 0-3
+
     [Header("Settings")]
     public float spawnY = 400f;
     public float noteSpeed = 300f;
@@ -26,7 +29,6 @@ public class NoteSpawner : MonoBehaviour
 
     void Start()
     {
-        // Load level data
         string levelName = PlayerPrefs.GetString("SelectedLevel", "LevelData_Maluku");
         levelData = Resources.Load<LevelData>(levelName);
 
@@ -39,29 +41,22 @@ public class NoteSpawner : MonoBehaviour
             return;
         }
 
-        // Set background
         if (backgroundImage != null && levelData.background != null)
-        {
             backgroundImage.sprite = levelData.background;
-        }
 
-        // Play musik
         if (musicSource != null && levelData.music != null)
         {
             musicSource.clip = levelData.music;
             musicSource.Play();
             songStarted = true;
-
-            // Kasih tau GameplayManager durasi lagu
             gameplayManager.StartWatchSong(levelData.music.length);
         }
         else
         {
             Debug.LogWarning("Music source atau musik kosong!");
-            songStarted = true; // tetap start biar note spawn
+            songStarted = true;
         }
 
-        // Load note sounds ke GameplayManager
         if (gameplayManager != null && levelData.noteClips != null)
             gameplayManager.noteClips = levelData.noteClips;
     }
@@ -78,11 +73,6 @@ public class NoteSpawner : MonoBehaviour
             SpawnNote(levelData.beatMap[currentBeatIndex].lane);
             currentBeatIndex++;
         }
-
-        // Deteksi "lagu selesai" sengaja TIDAK ditaruh di sini lagi.
-        // GameplayManager.WatchSongEnd() sudah jadi satu-satunya sumber kebenaran
-        // (pakai timer berdasarkan musicSource.clip.length), supaya tidak ada
-        // dua trigger yang berebut pindah scene di waktu yang berbeda.
     }
 
     void SpawnNote(int lane)
@@ -96,5 +86,11 @@ public class NoteSpawner : MonoBehaviour
         noteScript.speed = noteSpeed;
         noteScript.hitY = hitY;
         noteScript.gameplayManager = gameplayManager;
+
+        // Set sprite sesuai lane
+        Image img = note.GetComponent<Image>();
+        if (img != null && laneSprites != null && 
+            lane < laneSprites.Length && laneSprites[lane] != null)
+            img.sprite = laneSprites[lane];
     }
 }
