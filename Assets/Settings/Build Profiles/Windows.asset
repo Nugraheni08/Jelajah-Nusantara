@@ -42,6 +42,12 @@ MonoBehaviour:
     m_path: Assets/Scenes/GamePlayScene.unity
     m_guid: 1e2a7c810716c7a49a26ae4a84f2ef22
   - m_enabled: 1
+    m_path: Assets/Scenes/JabarScene/JabarWinScene.unity
+    m_guid: 151d4b57146134943a9a81b61c68f9fa
+  - m_enabled: 1
+    m_path: Assets/Scenes/JabarScene/JabarLoseScene.unity
+    m_guid: b14644a07730fc6418bd4f042d6c59e1
+  - m_enabled: 1
     m_path: Assets/Scenes/MalukuScene/MalukuStoryScene.unity
     m_guid: 86990a6fa54b42c44b30e628d41d9db1
   - m_enabled: 1
