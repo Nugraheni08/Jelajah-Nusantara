@@ -42,6 +42,8 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         continuePrompt.SetActive(false);
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.RegisterSFXSource(audioSource);
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
         ShowLine(currentLine);

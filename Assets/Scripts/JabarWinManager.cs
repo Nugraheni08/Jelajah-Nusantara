@@ -72,6 +72,9 @@ public class JabarWinManager : MonoBehaviour
         if (continuePrompt != null) continuePrompt.SetActive(false);
         if (unlockText != null) unlockText.gameObject.SetActive(false);
 
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.RegisterSFXSource(audioSource);
+
         if (panelResult != null) panelResult.SetActive(true);
         inputBlocked = true;
     }

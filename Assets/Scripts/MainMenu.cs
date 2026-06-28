@@ -15,6 +15,9 @@ public class MainMenu : MonoBehaviour
     {
         if (settingsPanel != null) settingsPanel.SetActive(false);
 
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.RegisterMusicSource(bgMusic);
+
         if (bgMusic != null && !bgMusic.isPlaying)
             bgMusic.Play();
     }

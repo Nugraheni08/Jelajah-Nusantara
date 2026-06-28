@@ -49,6 +49,9 @@ public class MalukuLoseManager : MonoBehaviour
         if (buttonPanel != null) buttonPanel.SetActive(false);
         if (continuePrompt != null) continuePrompt.SetActive(false);
 
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.RegisterSFXSource(audioSource);
+
         // Play SFX BZZZZT
         if (audioSource != null && bzzzztSFX != null)
             audioSource.PlayOneShot(bzzzztSFX);
