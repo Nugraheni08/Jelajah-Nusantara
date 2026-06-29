@@ -70,7 +70,10 @@ public class GameplayManager : MonoBehaviour
     public void PlayNoteSound(int lane)
     {
         if (noteClips != null && lane < noteClips.Length && noteClips[lane] != null)
-            noteAudioSource.PlayOneShot(noteClips[lane]);
+        {
+            float sfxVol = AudioManager.Instance != null ? AudioManager.Instance.GetSFXVolume() : 1f;
+            noteAudioSource.PlayOneShot(noteClips[lane], sfxVol);
+            }
     }
 
     public void ResetCombo()
