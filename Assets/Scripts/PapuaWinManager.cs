@@ -6,14 +6,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
 
-// Versi Papua dari MalukuWinManager -- strukturnya disamakan persis:
-// Panel Result -> Dialog Noise kalah -> Panel reveal Tifa -> Panel Peta (dialog
-// penutup panjang Aksa & Ranu) -> lanjut scene.
-//
-// BEDA dari Maluku: karena Papua daerah TERAKHIR, tidak ada "unlock daerah baru".
-// Setelah dialog penutup selesai, langsung lanjut ke "EndingScene" (TAMAT).
-// Scene "PapuaCutsceneAkhir" yang lama TIDAK dipakai lagi -- isinya sudah
-// dipindah semua ke panel "Peta" di script ini.
 public class PapuaWinManager : MonoBehaviour
 {
     [Header("Shared UI (dialog Noise)")]
@@ -31,14 +23,13 @@ public class PapuaWinManager : MonoBehaviour
     public GameObject btnUlang;
 
     [Header("Panel Noise Dialog")]
-    public Sprite bgSunset;     // isi: "Latar Papua.png"
-    public Sprite noiseSprite;  // isi: "Noise Kalah.png"
+    public Sprite bgSunset;
+    public Sprite noiseSprite;
 
-    [Header("Panel Tifa (reveal, sama pola dgn Panel Totobuang Maluku)")]
+    [Header("Panel Tifa")]
     public GameObject panelTifa;
-    // tombol di panel ini -> OnLanjutTifa()
 
-    [Header("Panel Peta (dialog penutup panjang)")]
+    [Header("Panel Peta")]
     public GameObject panelPeta;
     public Image wargaImagePeta;
     public Image aksaImagePeta;
@@ -47,17 +38,18 @@ public class PapuaWinManager : MonoBehaviour
     public TextMeshProUGUI speakerNamePeta;
     public GameObject continuePromptPeta;
     public GameObject dialogBoxPeta;
-    public Sprite wargaSprite; // isi: "13_NPC_Papua_Bicara.png"
-    public Sprite aksaSprite;  // isi: "14_Aksa_Bicara_2.png" / "Aksa Antusias.png"
-    public Sprite ranuSprite;  // isi: "03_Ranu_Bicara.png" / "21_Ranu_Senang.png"
+    public Sprite wargaSprite;
+    public Sprite aksaSprite;
+    public Sprite ranuSprite;
 
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip dingSFX;
     public AudioClip tifaMusic;
+    public AudioClip clickSFX;
 
     [Header("Settings")]
-    public string nextSceneName = "EndingScene"; // BUKAN PapuaCutsceneAkhir lagi
+    public string nextSceneName = "EndingScene";
     public float typingSpeed = 0.04f;
 
     private int currentLine = 0;
@@ -77,9 +69,6 @@ public class PapuaWinManager : MonoBehaviour
         if (dialogBox != null) dialogBox.SetActive(false);
         if (continuePrompt != null) continuePrompt.SetActive(false);
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
-
         if (panelResult != null) panelResult.SetActive(true);
         inputBlocked = true;
     }
@@ -92,6 +81,9 @@ public class PapuaWinManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
@@ -116,7 +108,7 @@ public class PapuaWinManager : MonoBehaviour
         SceneManager.LoadScene("GamePlayScene");
     }
 
-    // ===== PANEL 2 - NOISE DIALOG (kalah final, lebih dramatis) =====
+    // ===== PANEL 2 - NOISE DIALOG =====
     IEnumerator StartNoiseDialog()
     {
         inputBlocked = false;
@@ -194,7 +186,7 @@ public class PapuaWinManager : MonoBehaviour
         ShowTifaPanel();
     }
 
-    // ===== PANEL 3 - TIFA (reveal, statis, sama pola dgn Panel Totobuang) =====
+    // ===== PANEL 3 - TIFA =====
     void ShowTifaPanel()
     {
         if (panelTifa != null) panelTifa.SetActive(true);
@@ -218,12 +210,12 @@ public class PapuaWinManager : MonoBehaviour
         StartCoroutine(StartPetaSequence());
     }
 
-    // ===== PANEL 4 - PETA: dialog penutup panjang =====
+    // ===== PANEL 4 - PETA =====
     IEnumerator StartPetaSequence()
     {
         if (panelPeta != null) panelPeta.SetActive(true);
 
-        yield return null; // tunggu 1 frame biar SetActive sempat jalan
+        yield return null;
 
         if (wargaImagePeta != null) wargaImagePeta.gameObject.SetActive(false);
         if (aksaImagePeta != null) aksaImagePeta.gameObject.SetActive(false);
@@ -271,21 +263,24 @@ public class PapuaWinManager : MonoBehaviour
         if (line.speaker == "Warga")
         {
             SetActiveOnly(wargaImagePeta);
-            if (wargaImagePeta != null && wargaSprite != null) wargaImagePeta.sprite = wargaSprite;
+            if (wargaImagePeta != null && wargaSprite != null)
+                wargaImagePeta.sprite = wargaSprite;
         }
         else if (line.speaker == "Aksa")
         {
             SetActiveOnly(aksaImagePeta);
-            if (aksaImagePeta != null && aksaSprite != null) aksaImagePeta.sprite = aksaSprite;
+            if (aksaImagePeta != null && aksaSprite != null)
+                aksaImagePeta.sprite = aksaSprite;
         }
         else if (line.speaker == "Ranu")
         {
             SetActiveOnly(ranuImagePeta);
-            if (ranuImagePeta != null && ranuSprite != null) ranuImagePeta.sprite = ranuSprite;
+            if (ranuImagePeta != null && ranuSprite != null)
+                ranuImagePeta.sprite = ranuSprite;
         }
         else
         {
-            SetActiveOnly(null); // narasi -- tidak ada karakter muncul
+            SetActiveOnly(null);
         }
 
         if (speakerNamePeta != null)
@@ -326,9 +321,6 @@ public class PapuaWinManager : MonoBehaviour
         SetActiveOnly(null);
 
         yield return new WaitForSeconds(1f);
-
-        // Tidak ada unlock daerah baru di sini -- Papua adalah daerah terakhir.
-        // Langsung tutup dengan layar TAMAT (sudah dibangun di scene EndingScene).
         SceneManager.LoadScene(nextSceneName);
     }
 

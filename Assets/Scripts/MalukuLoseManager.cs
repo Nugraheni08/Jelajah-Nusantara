@@ -31,6 +31,7 @@ public class MalukuLoseManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip bzzzztSFX;
+    public AudioClip clickSFX;
 
     [Header("Settings")]
     public float typingSpeed = 0.04f;
@@ -49,18 +50,12 @@ public class MalukuLoseManager : MonoBehaviour
         if (buttonPanel != null) buttonPanel.SetActive(false);
         if (continuePrompt != null) continuePrompt.SetActive(false);
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
-
-        // Play SFX BZZZZT
         if (audioSource != null && bzzzztSFX != null)
             audioSource.PlayOneShot(bzzzztSFX);
 
-        // Set background dialog sunset
         if (background != null && bgDialog != null)
             background.sprite = bgDialog;
 
-        // Set karakter awal
         if (characterImageLeft != null && aksaSprite != null)
         {
             characterImageLeft.gameObject.SetActive(true);
@@ -88,6 +83,9 @@ public class MalukuLoseManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
@@ -149,7 +147,6 @@ public class MalukuLoseManager : MonoBehaviour
         if (characterImageLeft != null) characterImageLeft.gameObject.SetActive(false);
         if (characterImageRight != null) characterImageRight.gameObject.SetActive(false);
 
-        // Ganti background ke gagal
         if (background != null && bgGagal != null)
             background.sprite = bgGagal;
 

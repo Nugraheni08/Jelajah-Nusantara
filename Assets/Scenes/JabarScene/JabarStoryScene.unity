@@ -1145,8 +1145,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1292512636}
-  - component: {fileID: 1292512637}
   - component: {fileID: 1292512638}
+  - component: {fileID: 1292512639}
   m_Layer: 0
   m_Name: DialogManager
   m_TagString: Untagged
@@ -1169,7 +1169,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1215156369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1292512637
+--- !u!114 &1292512638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292512635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff1986741ac6d042bcd92b512fa77e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JabarDialogManager
+  background: {fileID: 964099350}
+  characterImageLeft: {fileID: 1700124915}
+  characterImageRight: {fileID: 473883671}
+  dialogText: {fileID: 58804912}
+  speakerName: {fileID: 528276943}
+  continuePrompt: {fileID: 968068045}
+  dialogBox: {fileID: 2040031904}
+  skipButton: {fileID: 6987555157203162424}
+  flashOverlay: {fileID: 0}
+  audioSource: {fileID: 1292512639}
+  noiseSFX: {fileID: 0}
+  dingSFX: {fileID: 0}
+  clickSFX: {fileID: 8300000, guid: 192847a5ef057104f8380653bf07b9e4, type: 3}
+  noiseStartLine: 999
+  noiseEndLine: 999
+  flashAtLine: 999
+  flashDuration: 1.5
+  dialogLines:
+  - speakerName: 
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 0}
+    dialogText: Daerah pertama terbuka.
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    dialogText: Dengarkan suara angklung.
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    dialogText: Ikuti ritmenya.
+  - speakerName: Aksa
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
+    characterSpriteRight: {fileID: 0}
+    dialogText: Jadi aku harus memainkan musik ini?
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    dialogText: Benar.
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    dialogText: Setiap daerah memiliki harmoni yang berbeda.
+  - speakerName: Ranu
+    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
+    characterSpriteLeft: {fileID: 0}
+    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
+    dialogText: Jika kamu dapat mengikuti iramanya, kekuatan harmoni akan bangkit
+      kembali.
+  typingSpeed: 0.03
+  nextSceneName: TutorialScene
+--- !u!82 &1292512639
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1180,8 +1248,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 976f9e504a41126439b2f3cf4f0d39e2, type: 3}
-  m_PlayOnAwake: 0
+  m_Resource: {fileID: 8300000, guid: 192847a5ef057104f8380653bf07b9e4, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1266,73 +1334,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1292512638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292512635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff1986741ac6d042bcd92b512fa77e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JabarDialogManager
-  background: {fileID: 964099350}
-  characterImageLeft: {fileID: 1700124915}
-  characterImageRight: {fileID: 473883671}
-  dialogText: {fileID: 58804912}
-  speakerName: {fileID: 528276943}
-  continuePrompt: {fileID: 968068045}
-  dialogBox: {fileID: 2040031904}
-  skipButton: {fileID: 6987555157203162424}
-  flashOverlay: {fileID: 0}
-  audioSource: {fileID: 0}
-  noiseSFX: {fileID: 0}
-  dingSFX: {fileID: 0}
-  noiseStartLine: 999
-  noiseEndLine: 999
-  flashAtLine: 999
-  flashDuration: 1.5
-  dialogLines:
-  - speakerName: 
-    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 0}
-    dialogText: Daerah pertama terbuka.
-  - speakerName: Ranu
-    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
-    dialogText: Dengarkan suara angklung.
-  - speakerName: Ranu
-    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
-    dialogText: Ikuti ritmenya.
-  - speakerName: Aksa
-    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
-    characterSpriteLeft: {fileID: 21300000, guid: f767207bafc60a04a8793df135644b91, type: 3}
-    characterSpriteRight: {fileID: 0}
-    dialogText: Jadi aku harus memainkan musik ini?
-  - speakerName: Ranu
-    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
-    dialogText: Benar.
-  - speakerName: Ranu
-    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
-    dialogText: Setiap daerah memiliki harmoni yang berbeda.
-  - speakerName: Ranu
-    background: {fileID: 21300000, guid: 7296b834f9aa5124c993d0a73015b837, type: 3}
-    characterSpriteLeft: {fileID: 0}
-    characterSpriteRight: {fileID: 21300000, guid: 36be9fd75333f054ba379df920bdd0d8, type: 3}
-    dialogText: Jika kamu dapat mengikuti iramanya, kekuatan harmoni akan bangkit
-      kembali.
-  typingSpeed: 0.03
-  nextSceneName: TutorialScene
 --- !u!1 &1700124913
 GameObject:
   m_ObjectHideFlags: 0

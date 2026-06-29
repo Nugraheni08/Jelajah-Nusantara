@@ -23,6 +23,7 @@ public class JabarDialogManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip noiseSFX;
     public AudioClip dingSFX;
+    public AudioClip clickSFX;
     public int noiseStartLine = 999;
     public int noiseEndLine = 999;
 
@@ -45,13 +46,9 @@ public class JabarDialogManager : MonoBehaviour
     {
         continuePrompt.SetActive(false);
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
-
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
 
-        // DING SFX di awal
         if (audioSource != null && dingSFX != null)
             audioSource.PlayOneShot(dingSFX);
 
@@ -64,6 +61,11 @@ public class JabarDialogManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            Debug.Log("Klik! audioSource=" + (audioSource != null ? "ada" : "NULL") + " clickSFX=" + (clickSFX != null ? clickSFX.name : "NULL"));
+            
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
@@ -73,7 +75,6 @@ public class JabarDialogManager : MonoBehaviour
 
     void ShowLine(int index)
     {
-        // Semua dialog selesai → langsung pindah scene
         if (index >= dialogLines.Count)
         {
             SceneManager.LoadScene(nextSceneName);
@@ -128,7 +129,7 @@ public class JabarDialogManager : MonoBehaviour
         {
             if (index >= noiseStartLine && index <= noiseEndLine)
             {
-                if (!audioSource.isPlaying)
+                if (audioSource.clip != noiseSFX)
                 {
                     audioSource.clip = noiseSFX;
                     audioSource.loop = true;
@@ -175,6 +176,7 @@ public class JabarDialogManager : MonoBehaviour
         currentLine++;
         ShowLine(currentLine);
     }
+
     public void OnSkipClicked()
     {
         StopAllCoroutines();

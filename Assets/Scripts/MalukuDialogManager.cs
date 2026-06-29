@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
 
-
 public class MalukuDialogManager : MonoBehaviour
 {
     [Header("UI References")]
@@ -34,6 +33,7 @@ public class MalukuDialogManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip noiseSFX;
+    public AudioClip clickSFX;
     public int noiseStartLine = 3;
     public int noiseEndLine = 4;
 
@@ -47,7 +47,7 @@ public class MalukuDialogManager : MonoBehaviour
     [Header("Settings")]
     public float typingSpeed = 0.03f;
     public string gameplaySceneName = "GameplayScene";
-    public string levelDataKey = "LevelData_Maluku"; // ganti sesuai level: LevelData_JawaBarat / LevelData_Papua
+    public string levelDataKey = "LevelData_Maluku";
 
     private int currentLine = 0;
     private bool isTyping = false;
@@ -57,9 +57,6 @@ public class MalukuDialogManager : MonoBehaviour
     void Start()
     {
         continuePrompt.SetActive(false);
-
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
 
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
@@ -84,6 +81,9 @@ public class MalukuDialogManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
@@ -150,7 +150,7 @@ public class MalukuDialogManager : MonoBehaviour
         {
             if (index >= noiseStartLine && index <= noiseEndLine)
             {
-                if (!audioSource.isPlaying)
+                if (audioSource.clip != noiseSFX)
                 {
                     audioSource.clip = noiseSFX;
                     audioSource.loop = true;
@@ -175,10 +175,8 @@ public class MalukuDialogManager : MonoBehaviour
         Debug.Log("SHOW MISI PANEL");
 
         waitingForMisi = true;
-
         continuePrompt.SetActive(false);
         dialogBox.SetActive(false);
-
         darkOverlay.SetActive(true);
         misiPanel.SetActive(true);
     }
@@ -190,11 +188,8 @@ public class MalukuDialogManager : MonoBehaviour
 
         Debug.Log("Disimpan = " + PlayerPrefs.GetString("SelectedLevel"));
 
-        if (misiPanel != null)
-            misiPanel.SetActive(false);
-
-        if (darkOverlay != null)
-            darkOverlay.SetActive(false);
+        if (misiPanel != null) misiPanel.SetActive(false);
+        if (darkOverlay != null) darkOverlay.SetActive(false);
 
         StartCoroutine(CountdownAndStart());
     }
@@ -212,7 +207,6 @@ public class MalukuDialogManager : MonoBehaviour
             {
                 if (countdownText != null)
                     countdownText.text = c;
-
                 yield return new WaitForSeconds(1f);
             }
 
@@ -220,7 +214,6 @@ public class MalukuDialogManager : MonoBehaviour
         }
 
         Debug.Log("Load Scene: " + gameplaySceneName);
-
         SceneManager.LoadScene(gameplaySceneName);
     }
 
@@ -276,6 +269,7 @@ public class MalukuDialogManager : MonoBehaviour
         currentLine++;
         ShowLine(currentLine);
     }
+
     public void OnSkipClicked()
     {
         StopAllCoroutines();

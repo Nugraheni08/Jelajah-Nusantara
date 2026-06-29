@@ -49,7 +49,8 @@ public class JabarWinManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip dingSFX;
     public AudioClip angklungMusic;
-    public AudioClip bgMusicClip; // ← musik saat NPC ngomong
+    public AudioClip bgMusicClip;
+    public AudioClip clickSFX;
 
     [Header("Settings")]
     public string nextSceneName = "MalukuStoryScene";
@@ -73,9 +74,6 @@ public class JabarWinManager : MonoBehaviour
         if (continuePrompt != null) continuePrompt.SetActive(false);
         if (unlockText != null) unlockText.gameObject.SetActive(false);
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
-
         if (panelResult != null) panelResult.SetActive(true);
         inputBlocked = true;
     }
@@ -88,6 +86,9 @@ public class JabarWinManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
@@ -137,7 +138,6 @@ public class JabarWinManager : MonoBehaviour
 
         if (dialogBox != null) dialogBox.SetActive(true);
 
-        // Play bgMusic saat NPC mulai ngomong
         if (audioSource != null && bgMusicClip != null)
         {
             audioSource.clip = bgMusicClip;
@@ -184,9 +184,7 @@ public class JabarWinManager : MonoBehaviour
         inputBlocked = true;
         if (continuePrompt != null) continuePrompt.SetActive(false);
 
-        // Stop bgMusic saat Noise menghilang
-        if (audioSource != null)
-            audioSource.Stop();
+        if (audioSource != null) audioSource.Stop();
 
         if (characterImageRight != null)
         {

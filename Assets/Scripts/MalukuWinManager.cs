@@ -47,6 +47,7 @@ public class MalukuWinManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip dingSFX;
     public AudioClip totobuangMusic;
+    public AudioClip clickSFX;
 
     [Header("Settings")]
     public string nextSceneName = "PapuaStoryScene";
@@ -69,10 +70,6 @@ public class MalukuWinManager : MonoBehaviour
         if (dialogBox != null) dialogBox.SetActive(false);
         if (continuePrompt != null) continuePrompt.SetActive(false);
 
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
-
-        // Paksa sembunyikan unlockText terlepas dari parent-nya
         if (unlockText != null)
         {
             unlockText.gameObject.SetActive(false);
@@ -80,7 +77,7 @@ public class MalukuWinManager : MonoBehaviour
         }
 
         if (panelResult != null) panelResult.SetActive(true);
-        inputBlocked = true;;
+        inputBlocked = true;
     }
 
     void Update()
@@ -91,6 +88,9 @@ public class MalukuWinManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
@@ -228,11 +228,9 @@ public class MalukuWinManager : MonoBehaviour
     // =====================
     IEnumerator StartPetaSequence()
     {
-        // Aktifkan panel peta dulu
         if (panelPeta != null) panelPeta.SetActive(true);
 
-        // Setelah panel aktif, baru sembunyikan child objects
-        yield return null; // tunggu 1 frame biar SetActive sempat jalan
+        yield return null;
 
         if (unlockText != null) unlockText.gameObject.SetActive(false);
         if (wargaImagePeta != null) wargaImagePeta.gameObject.SetActive(false);
@@ -335,11 +333,10 @@ public class MalukuWinManager : MonoBehaviour
         if (unlockText != null)
         {
             unlockText.gameObject.SetActive(true);
-            // DEBUG - cek teks sebelum diubah
             Debug.Log("UnlockText sebelum diubah: " + unlockText.text);
             unlockText.text = "Daerah Baru Terbuka!\nPapua";
             Debug.Log("UnlockText sesudah diubah: " + unlockText.text);
-            
+
             unlockText.color = new Color(1f, 0.84f, 0f, 0f);
             float t = 0f;
             while (t < 1f)

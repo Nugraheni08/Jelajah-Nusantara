@@ -1471,7 +1471,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 976f9e504a41126439b2f3cf4f0d39e2, type: 3}
+  m_Resource: {fileID: 8300000, guid: 192847a5ef057104f8380653bf07b9e4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1585,8 +1585,9 @@ MonoBehaviour:
   darkOverlay: {fileID: 161076378}
   countdownPanel: {fileID: 0}
   countdownText: {fileID: 0}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1292512637}
   noiseSFX: {fileID: 0}
+  clickSFX: {fileID: 8300000, guid: 192847a5ef057104f8380653bf07b9e4, type: 3}
   noiseStartLine: 2
   noiseEndLine: 3
   flashAtLine: 999

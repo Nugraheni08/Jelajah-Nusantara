@@ -822,6 +822,7 @@ MonoBehaviour:
   flashOverlay: {fileID: 212693576}
   audioSource: {fileID: 1417414763}
   flashSFX: {fileID: 8300000, guid: 976f9e504a41126439b2f3cf4f0d39e2, type: 3}
+  clickSFX: {fileID: 8300000, guid: 192847a5ef057104f8380653bf07b9e4, type: 3}
   flashAtLine: 0
   flashDuration: 2
   dialogLines:

@@ -49,8 +49,6 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         continuePrompt.SetActive(false);
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
         ShowLine(currentLine);
@@ -62,7 +60,6 @@ public class DialogManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
-            // Pakai audioSource langsung, tidak perlu AudioManager
             if (audioSource != null && clickSFX != null)
                 audioSource.PlayOneShot(clickSFX);
 
@@ -120,7 +117,8 @@ public class DialogManager : MonoBehaviour
         {
             if (index >= noiseStartLine && index <= noiseEndLine)
             {
-                if (!audioSource.isPlaying)
+                // Langsung play kalau belum pakai clip noise
+                if (audioSource.clip != noiseSFX)
                 {
                     audioSource.clip = noiseSFX;
                     audioSource.loop = true;
@@ -199,6 +197,7 @@ public class DialogManager : MonoBehaviour
         currentLine++;
         ShowLine(currentLine);
     }
+
     public void OnSkipClicked()
     {
         StopAllCoroutines();

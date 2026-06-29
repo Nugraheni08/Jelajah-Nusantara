@@ -21,6 +21,7 @@ public class DialogManagerDuo : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip flashSFX;
+    public AudioClip clickSFX;
 
     [Header("Flash Settings")]
     public int flashAtLine = 0;
@@ -40,8 +41,6 @@ public class DialogManagerDuo : MonoBehaviour
     void Start()
     {
         continuePrompt.SetActive(false);
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
         ShowLine(currentLine);
@@ -53,6 +52,9 @@ public class DialogManagerDuo : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else

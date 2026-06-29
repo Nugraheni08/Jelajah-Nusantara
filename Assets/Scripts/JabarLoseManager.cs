@@ -31,6 +31,7 @@ public class JabarLoseManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip bzzzztSFX;
+    public AudioClip clickSFX;
 
     [Header("Settings")]
     public float typingSpeed = 0.04f;
@@ -48,9 +49,6 @@ public class JabarLoseManager : MonoBehaviour
     {
         if (buttonPanel != null) buttonPanel.SetActive(false);
         if (continuePrompt != null) continuePrompt.SetActive(false);
-
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
 
         if (audioSource != null && bzzzztSFX != null)
             audioSource.PlayOneShot(bzzzztSFX);
@@ -85,6 +83,9 @@ public class JabarLoseManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
@@ -154,7 +155,6 @@ public class JabarLoseManager : MonoBehaviour
 
     public void OnCobaLagi()
     {
-        // Set level Jabar sebelum masuk gameplay
         PlayerPrefs.SetString("SelectedLevel", "LevelData_JawaBarat");
         PlayerPrefs.Save();
         SceneManager.LoadScene(gameplaySceneName);

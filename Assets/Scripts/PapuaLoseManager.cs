@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
 
-// Versi Papua dari MalukuLoseManager. Dialognya sama (Aksa/Ranu) seperti di
-// naskah untuk Jabar & Maluku -- cuma SelectedLevel yang diganti ke Papua.
 public class PapuaLoseManager : MonoBehaviour
 {
     [Header("UI References")]
@@ -25,14 +23,15 @@ public class PapuaLoseManager : MonoBehaviour
     public GameObject btnKembaliMenu;
 
     [Header("Sprites")]
-    public Sprite bgDialog;   // isi pakai: "Latar Papua.png"
-    public Sprite bgGagal;    // isi pakai: "19_Panel_MisiGagal.png" (sama kayak Maluku)
-    public Sprite aksaSprite; // isi pakai sprite Aksa sedih/kaget, contoh: "Aksa Khawatir.png"
-    public Sprite ranuSprite; // isi pakai sprite Ranu, contoh: "Ranu Sedih.png"
+    public Sprite bgDialog;
+    public Sprite bgGagal;
+    public Sprite aksaSprite;
+    public Sprite ranuSprite;
 
     [Header("Audio")]
     public AudioSource audioSource;
-    public AudioClip bzzzztSFX; // boleh dipakai ulang clip yang sama dengan Maluku
+    public AudioClip bzzzztSFX;
+    public AudioClip clickSFX;
 
     [Header("Settings")]
     public float typingSpeed = 0.04f;
@@ -50,9 +49,6 @@ public class PapuaLoseManager : MonoBehaviour
     {
         if (buttonPanel != null) buttonPanel.SetActive(false);
         if (continuePrompt != null) continuePrompt.SetActive(false);
-
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.RegisterSFXSource(audioSource);
 
         if (audioSource != null && bzzzztSFX != null)
             audioSource.PlayOneShot(bzzzztSFX);
@@ -87,6 +83,9 @@ public class PapuaLoseManager : MonoBehaviour
             Keyboard.current.spaceKey.wasPressedThisFrame ||
             Keyboard.current.enterKey.wasPressedThisFrame)
         {
+            if (audioSource != null && clickSFX != null)
+                audioSource.PlayOneShot(clickSFX);
+
             if (isTyping)
                 skipTyping = true;
             else
@@ -156,7 +155,7 @@ public class PapuaLoseManager : MonoBehaviour
 
     public void OnCobaLagi()
     {
-        PlayerPrefs.SetString("SelectedLevel", "LevelData_Papua"); // <- bedanya dari punya Maluku
+        PlayerPrefs.SetString("SelectedLevel", "LevelData_Papua");
         PlayerPrefs.Save();
         SceneManager.LoadScene(gameplaySceneName);
     }
@@ -188,4 +187,3 @@ public class PapuaLoseManager : MonoBehaviour
         if (continuePrompt != null) continuePrompt.SetActive(true);
     }
 }
-
