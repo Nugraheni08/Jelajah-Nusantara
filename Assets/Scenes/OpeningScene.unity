@@ -1199,14 +1199,7 @@ MonoBehaviour:
   noiseSFX: {fileID: 8300000, guid: e2ed0bd8e598f974e91b6f5994e54585, type: 3}
   noiseStartLine: 7
   noiseEndLine: 9
-  lineAudioClips:
-  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
-  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
-  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
-  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
-  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
-  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
-  - {fileID: 8300000, guid: 2b9f4ed77f32a0c41a49d37cd2b27a22, type: 3}
+  lineAudioClips: []
   flashAtLine: 15
   flashDuration: 5
   dialogLines:
@@ -1283,6 +1276,7 @@ MonoBehaviour:
     background: {fileID: 21300000, guid: e0762ba225fa88c48881dae2dfcce2d6, type: 3}
     characterSprite: {fileID: 0}
     dialogText: Dan sejak malam itu, perjalanan Aksa dimulai.
+  clickSFX: {fileID: 8300000, guid: 192847a5ef057104f8380653bf07b9e4, type: 3}
   typingSpeed: 0.03
   nextSceneName: GameIntroScene
 --- !u!4 &1369221504
@@ -1312,7 +1306,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 976f9e504a41126439b2f3cf4f0d39e2, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

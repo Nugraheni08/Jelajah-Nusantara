@@ -69,6 +69,9 @@ public class MalukuWinManager : MonoBehaviour
         if (dialogBox != null) dialogBox.SetActive(false);
         if (continuePrompt != null) continuePrompt.SetActive(false);
 
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.RegisterSFXSource(audioSource);
+
         // Paksa sembunyikan unlockText terlepas dari parent-nya
         if (unlockText != null)
         {
@@ -77,7 +80,7 @@ public class MalukuWinManager : MonoBehaviour
         }
 
         if (panelResult != null) panelResult.SetActive(true);
-        inputBlocked = true;
+        inputBlocked = true;;
     }
 
     void Update()

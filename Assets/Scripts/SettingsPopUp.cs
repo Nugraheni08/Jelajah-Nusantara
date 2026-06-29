@@ -18,14 +18,16 @@ public class SettingsPopupManager : MonoBehaviour
 
     void LoadAllSettings()
     {
+        // Listener selalu dipasang duluan, terlepas dari AudioManager sudah siap atau belum,
+        // supaya geser slider tetap selalu berfungsi.
+        musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
+        sfxSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
+
         if (AudioManager.Instance != null)
         {
             musicSlider.value = AudioManager.Instance.GetMusicVolume();
             sfxSlider.value = AudioManager.Instance.GetSFXVolume();
         }
-
-        musicSlider.onValueChanged.AddListener(OnMusicVolumeChanged);
-        sfxSlider.onValueChanged.AddListener(OnSFXVolumeChanged);
     }
 
     // Panggil dari tombol "Pengaturan" di Main Menu
@@ -42,12 +44,14 @@ public class SettingsPopupManager : MonoBehaviour
 
     public void OnMusicVolumeChanged(float value)
     {
+        Debug.Log("OnMusicVolumeChanged dipanggil, value=" + value + ", AudioManager.Instance=" + (AudioManager.Instance != null));
         if (AudioManager.Instance != null)
             AudioManager.Instance.SetMusicVolume(value);
     }
 
     public void OnSFXVolumeChanged(float value)
     {
+        Debug.Log("OnSFXVolumeChanged dipanggil, value=" + value + ", AudioManager.Instance=" + (AudioManager.Instance != null));
         if (AudioManager.Instance != null)
             AudioManager.Instance.SetSFXVolume(value);
     }

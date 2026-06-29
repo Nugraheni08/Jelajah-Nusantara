@@ -46,6 +46,9 @@ public class NoteSpawner : MonoBehaviour
 
         if (musicSource != null && levelData.music != null)
         {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.RegisterMusicSource(musicSource);
+
             musicSource.clip = levelData.music;
             musicSource.Play();
             songStarted = true;

@@ -58,6 +58,9 @@ public class MalukuDialogManager : MonoBehaviour
     {
         continuePrompt.SetActive(false);
 
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.RegisterSFXSource(audioSource);
+
         if (flashOverlay != null)
             flashOverlay.color = new Color(1, 1, 1, 0);
 
