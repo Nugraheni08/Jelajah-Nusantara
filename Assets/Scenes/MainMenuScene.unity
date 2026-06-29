@@ -3885,7 +3885,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   settingsPanel: {fileID: 1827520325}
-  bgMusic: {fileID: 2027454659}
 --- !u!4 &1821597353
 Transform:
   m_ObjectHideFlags: 0
@@ -4507,6 +4506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicSource: {fileID: 1454006309}
+  defaultMusicClip: {fileID: 8300000, guid: b578a793915f1ce4e89fc225f15a79a5, type: 3}
   sfxSource: {fileID: 981088850}
 --- !u!1 &2056424990
 GameObject:

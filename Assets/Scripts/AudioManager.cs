@@ -10,6 +10,9 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Source untuk Musik Background")]
     public AudioSource musicSource;
 
+    [Header("Fallback: clip musik utama, dipakai ulang kalau musicSource.clip ke-reset jadi null")]
+    public AudioClip defaultMusicClip;
+
     [Header("Audio Source untuk SFX (klik tombol, dll)")]
     public AudioSource sfxSource;
 
@@ -34,11 +37,25 @@ public class AudioManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             LoadVolumeSettings();
+            EnsureMusicPlaying();
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    // Jaring pengaman: kalau clip di musicSource ternyata kosong (entah kenapa
+    // ke-reset), pasang ulang dari defaultMusicClip dan mainkan lagi.
+    public void EnsureMusicPlaying()
+    {
+        if (musicSource == null) return;
+
+        if (musicSource.clip == null && defaultMusicClip != null)
+            musicSource.clip = defaultMusicClip;
+
+        if (musicSource.clip != null && musicSource.enabled && !musicSource.isPlaying)
+            musicSource.Play();
     }
 
     void LoadVolumeSettings()
